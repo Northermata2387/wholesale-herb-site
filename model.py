@@ -9,11 +9,23 @@ class User(db.Model):
     __tablename__ = "users"
 
     user_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    user_email = db.Column(db.String(255), unique = True, nullable = False)
-    user_password = db.Column(db.text, nullable = False)
+    email = db.Column(db.String(255), unique = True, nullable = False)
+    password = db.Column(db.text, nullable = False)
+    first_name = db.Column(db.String(24), nullable = False)
+    last_name = db.Column(db.String(48), nullable = False)
+    
+    addresses = db.relationship("Address", backref="user")
+    ratings = db.relationship("Rating", backref="user")
+    reviews = db.relationship("Review", backref="user")
+
+    def __init__(self, email, password, first_name, last_name):
+        self.email = email
+        self.password = password
+        self.first_name = first_name
+        self.last_name = last_name
 
     def __repr__(self):
-        return f"<User user_id={self.user_id} email={self.user_email}>"
+        return f"<User user_id={self.user_id} email={self.email} first_name={self.first_name} last_name ={self.last_name} >"
     
     
 class Address(db.Model):
@@ -21,16 +33,24 @@ class Address(db.Model):
     __tablename__ = "addresses"
     
     address_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    address_street = db.Column(db.String(255), unique = True, nullable = False)
-    address_city = db.Column(db.String(255), nullable = False)
-    address_zip_code = db.Column(db.Integer(5), nullable = False)
-    address_state = db.Column(db.String(2), nullable = False)
+    address_line1 = db.Column(db.String(72), unique = True, nullable = False)
+    city = db.Column(db.String(72), nullable = False)
+    state = db.Column(db.String(2), nullable = False)
+    postal_code = db.Column(db.String(24), nullable = False)
+    country = db.Column(db.String(24), nullable = False)
+    telephone = db.Column(db.Integer, nullable = False)
     user_id = db.Column(db.Integer, db.ForeignKey("users.user_id"))
 
-    user = db.relationship("User", backref="addresses")
-
+    def __init__(self, address_line1, city, state, postal_code, country, telephone):
+        self.address_line1 = address_line1
+        self.city = city
+        self.state = state
+        self.postal_code = postal_code
+        self.country = country
+        self.telephone = telephone
+        
     def __repr__(self):
-        return f"<Address address_id={self.address_id} address_street={self.address_street} address_city={self.address_city} address_zip_code={self.address_zip_code} address_state={self.address_state}>"
+        return f"<Address address_id={self.address_id} address_line1={self.address_line1} city={self.city} state={self.state} postal_code={self.postal_code} country={self.country} telephone={self.telephone}>"
 
 
 class Product(db.Model):
@@ -38,29 +58,42 @@ class Product(db.Model):
     __tablename__ = "products"
     
     product_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    product_title = db.Column(db.String(255), unique = True, nullable = False)
-    product_botanical_name = db.Column(db.String(255), unique = True, nullable = False)
-    product_origin = db.Column(db.String(255), nullable = False)
-    product_description = db.Column(db.String(255), nullable = False)
-    product_image = db.Column(db.String(255), nullable = False)
+    name = db.Column(db.String(255), unique = True, nullable = False)
+    botanical_name = db.Column(db.String(255), nullable = False)
+    origin = db.Column(db.String(255), nullable = False)
+    desc = db.Column(db.String(255), nullable = False)
+    image = db.Column(db.String(255), nullable = False)
     
+    product_options= db.relationship("Option", backref="product")
+    ratings = db.relationship("Rating", backref="product")
+    reviews = db.relationship("Review", backref="product")
+    
+    def __init__(self, name, botanical_name, origin, desc, image):
+        self.name = name
+        self.botanical_name = botanical_name
+        self.origin = origin
+        self.desc = desc
+        self.image = image
+        
     def __repr__(self):
-        return f"<Product product_id={self.product_id} product_title={self.product_title} product_botanical_name={self.product_botanical_name} product_origin={self.product_origin} product_description={self.product_description} title={self.product_image} title={self.product_image}>"
+        return f"<Product product_id={self.product_id} name={self.name} botanical_name={self.botanical_name} origin={self.origin} desc={self.desc} image={self.image}>"
 
 
 class Option(db.Model):
 
-    __tablename__ = "options"
+    __tablename__ = "product_options"
     
-    option_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    option_size = db.Column(db.Integer, nullable = False)
-    option_price = db.Column(db.Float, nullable = False)
+    product_options_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    size = db.Column(db.Integer, nullable = False)
+    price = db.Column(db.Float, nullable = False)
     product_id = db.Column(db.Integer, db.ForeignKey("products.product_id"))
-    
-    product= db.relationship("Product", backref="options")
-    
+        
+    def __init__(self, size, price):
+        self.size = size
+        self.price = price
+        
     def __repr__(self):
-        return f"<Option option_id={self.option_id} option_size={self.option_size} option_price={self.option_price}>"
+        return f"<Option product_options_id={self.product_options_id} size={self.size} price={self.price}>"
     
 
 class Rating(db.Model):
@@ -68,15 +101,15 @@ class Rating(db.Model):
     __tablename__ = "ratings"
 
     rating_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    rating_stars = db.Column(db.Integer)
+    score = db.Column(db.Integer)
     product_id = db.Column(db.Integer, db.ForeignKey("products.product_id"))
     user_id = db.Column(db.Integer, db.ForeignKey("users.user_id"))
     
-    product= db.relationship("Product", backref="ratings")
-    user = db.relationship("User", backref="ratings")
+    def __init__(self, score):
+        self.score = score
     
     def __repr__(self):
-        return f"<Rating rating_id={self.rating_id} rating_stars={self.rating_stars}>"
+        return f"<Rating rating_id={self.rating_id} score={self.score}>"
 
 
 class Review(db.Model):
@@ -84,32 +117,16 @@ class Review(db.Model):
     __tablename__ = "reviews"
 
     review_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    review_comment = db.Column(db.String(255))
+    comment = db.Column(db.String(255))
     product_id = db.Column(db.Integer, db.ForeignKey("products.product_id"))
     user_id = db.Column(db.Integer, db.ForeignKey("users.user_id"))
 
-    product= db.relationship("Product", backref="ratings")
-    user = db.relationship("User", backref="ratings")
-
+    def __init__(self, comment):
+        self.comment = comment
+        
     def __repr__(self):
-        return f"<Review review_id ={self.review_id } review_comment={self.review_comment}>"
+        return f"<Review review_id ={self.review_id } comment={self.comment}>"
     
-    
-class Order(db.Model):
-
-    __tablename__ = "orders"
-
-    orders_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    product_id = db.Column(db.Integer, db.ForeignKey("products.product_id"))
-    user_id = db.Column(db.Integer, db.ForeignKey("users.user_id"))
-    
-    product= db.relationship("Product", backref="ratings")
-    user = db.relationship("User", backref="ratings")
-
-    def __repr__(self):
-        return f"Order orders_id={self.orders_id}>"
-
-
 
 def connect_to_db(flask_app, db_uri=environ["POSTGRES_URI"], echo=True):
     flask_app.config["SQLALCHEMY_DATABASE_URI"] = db_uri
