@@ -1,0 +1,14 @@
+{% extends 'base.html' %} {% block title %}Bulk Organic Herbs{% endblock %} {%
+block body %}
+<div>
+  <ul>
+    {% for product in products %}
+    <li>
+      <a href="/products/{{ product.product_id }}">
+        <img src="{{ product.image }}" loading="lazy" />
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}

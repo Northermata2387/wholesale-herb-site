@@ -1,21 +1,21 @@
-address_line1, city, state, postal_code, country, telephone
-22464 Dickens Highway Apt. 245,South Billmouth,Ohio,27763,United Sates,(530) 217-1460
-989 Frami Avenue,Johnathonberg,North Dakota,16837,United Sates,(560) 514-0756 x42
-2447 Blick Canyon,North Ebba,West Virginia,71051,United Sates,(803) 415-2496 x7
-975 Macejkovic Center,Port Lisachester,Nevada,36348,United Sates,(252) 585-9186
-327 Powlowski Dale Apt. 524,Abbottstad,Maryland,04716,United Sates,(275) 781-9191 x9
-404 Kassulke Hollow Suite 828,Lake Alysha,Montana,23005,United Sates,(554) 426-1360 x35
-284 Wilbert Inlet,North Jasminstad,Wisconsin,61607,United Sates,(371) 677-7958 x18
-4782 Elton Village Apt. 510,East Macey,Illinois,37288,United Sates,(381) 922-3545 x11
-75558 Homenick Curve,New Catalina,District of Columbia,96683,United Sates,(787) 342-5710 x6
-44688 Katharina Causeway Suite 596,Heathcotehaven,New Jersey,54126,United Sates,(949) 339-4723
-7757 Collins Orchard Suite 119,West Brayanton,Florida,49353,United Sates,(532) 238-2059 x5
-7592 Runte Crest Apt. 627,South Marquesmouth,Tennessee,62794,United Sates,(954) 224-6765
-33413 Keyon Course Apt. 437,Eltonland,New Jersey,92032,United Sates,(657) 349-7446 x9
-347 Riley Highway Apt. 368,Jenkinshaven,Kentucky,14886,United Sates,(881) 296-6541
-235 Rutherford Avenue,Port Hyman,Illinois,95605,United Sates,(361) 558-3504
-104 Abernathy Fall,New Sabrinaburgh,Florida,76197,United Sates,(789) 581-1102
-80482 Katlynn Walk,New Glennie,Florida,02498,United Sates,(497) 349-4456 x25
-1399 Hollis Knoll Suite 148,Stokesshire,Utah,64358,United Sates,(912) 908-7685 x2
-347 Anderson Ford,Mantemouth,Texas,71988,United Sates,(872) 214-8485 x9
-11319 Rosina Bridge Apt. 433,West Josiannefort,New York,43687,United Sates,(851) 675-4725 x8
+street,city,state,postal_code,country,telephone
+22464DickensHighwayApt.245,SouthBillmouth,Ohio,27763,UnitedSates,(530)217-1460
+989FramiAvenue,Johnathonberg,NorthDakota,16837,UnitedSates,(560)514-0756x42
+2447BlickCanyon,NorthEbba,WestVirginia,71051,UnitedSates,(803)415-2496x7
+975MacejkovicCenter,PortLisachester,Nevada,36348,UnitedSates,(252)585-9186
+327PowlowskiDaleApt.524,Abbottstad,Maryland,04716,UnitedSates,(275)781-9191x9
+404KassulkeHollowSuite828,LakeAlysha,Montana,23005,UnitedSates,(554)426-1360x35
+284WilbertInlet,NorthJasminstad,Wisconsin,61607,UnitedSates,(371)677-7958x18
+4782EltonVillageApt.510,EastMacey,Illinois,37288,UnitedSates,(381)922-3545x11
+75558HomenickCurve,NewCatalina,DistrictofColumbia,96683,UnitedSates,(787)342-5710x6
+44688KatharinaCausewaySuite596,Heathcotehaven,NewJersey,54126,UnitedSates,(949)339-4723
+7757CollinsOrchardSuite119,WestBrayanton,Florida,49353,UnitedSates,(532)238-2059x5
+7592RunteCrestApt.627,SouthMarquesmouth,Tennessee,62794,UnitedSates,(954)224-6765
+33413KeyonCourseApt.437,Eltonland,NewJersey,92032,UnitedSates,(657)349-7446x9
+347RileyHighwayApt.368,Jenkinshaven,Kentucky,14886,UnitedSates,(881)296-6541
+235RutherfordAvenue,PortHyman,Illinois,95605,UnitedSates,(361)558-3504
+104AbernathyFall,NewSabrinaburgh,Florida,76197,UnitedSates,(789)581-1102
+80482KatlynnWalk,NewGlennie,Florida,02498,UnitedSates,(497)349-4456x25
+1399HollisKnollSuite148,Stokesshire,Utah,64358,UnitedSates,(912)908-7685x2
+347AndersonFord,Mantemouth,Texas,71988,UnitedSates,(872)214-8485x9
+11319RosinaBridgeApt.433,WestJosiannefort,NewYork,43687,UnitedSates,(851)675-4725x8

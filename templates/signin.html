@@ -1,0 +1,31 @@
+{% extends 'base.html' %}{% block title %}(Placeholder){% endblock %} {% block
+body %}
+<div>
+  <div class="relative">
+    <div class="absolute">
+      <h2>Sign In</h2>
+      <form action="/login" method="POST">
+        <input
+          class="sigin-input"
+          type="text"
+          name="email"
+          placeholder="Email adress"
+        />
+        <input
+          class="signin-input"
+          type="password"
+          name="password"
+          placeholder="Password"
+        />
+        <input type="submit" value="Log In" />
+      </form>
+      <p>
+        New to Sun Rise Herbs<a
+          class="register-now"
+          href="{{ url_for('register') }}"
+          >Register Now</a
+        >
+      </p>
+    </div>
+  </div>
+</div>

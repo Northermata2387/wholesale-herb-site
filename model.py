@@ -10,7 +10,7 @@ class User(db.Model):
 
     user_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     email = db.Column(db.String(255), unique = True, nullable = False)
-    password = db.Column(db.text, nullable = False)
+    password = db.Column(db.Text, nullable = False)
     first_name = db.Column(db.String(24), nullable = False)
     last_name = db.Column(db.String(48), nullable = False)
     
@@ -33,7 +33,7 @@ class Address(db.Model):
     __tablename__ = "addresses"
     
     address_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    address_line1 = db.Column(db.String(72), unique = True, nullable = False)
+    street = db.Column(db.String(72), unique = True, nullable = False)
     city = db.Column(db.String(72), nullable = False)
     state = db.Column(db.String(2), nullable = False)
     postal_code = db.Column(db.String(24), nullable = False)
@@ -41,8 +41,8 @@ class Address(db.Model):
     telephone = db.Column(db.Integer, nullable = False)
     user_id = db.Column(db.Integer, db.ForeignKey("users.user_id"))
 
-    def __init__(self, address_line1, city, state, postal_code, country, telephone):
-        self.address_line1 = address_line1
+    def __init__(self, street, city, state, postal_code, country, telephone):
+        self.street = street
         self.city = city
         self.state = state
         self.postal_code = postal_code
@@ -50,7 +50,7 @@ class Address(db.Model):
         self.telephone = telephone
         
     def __repr__(self):
-        return f"<Address address_id={self.address_id} address_line1={self.address_line1} city={self.city} state={self.state} postal_code={self.postal_code} country={self.country} telephone={self.telephone}>"
+        return f"<Address address_id={self.address_id} street={self.street} city={self.city} state={self.state} postal_code={self.postal_code} country={self.country} telephone={self.telephone}>"
 
 
 class Product(db.Model):
@@ -58,25 +58,31 @@ class Product(db.Model):
     __tablename__ = "products"
     
     product_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    name = db.Column(db.String(255), unique = True, nullable = False)
+    name = db.Column(db.String(255), nullable = False)
+    part = db.Column(db.String(255))
+    grade = db.Column(db.String(255))
     botanical_name = db.Column(db.String(255), nullable = False)
     origin = db.Column(db.String(255), nullable = False)
-    desc = db.Column(db.String(255), nullable = False)
+    desc = db.Column(db.Text, nullable = False)
+    sku = db.Column(db.String(255), unique = True, nullable = False)
     image = db.Column(db.String(255), nullable = False)
     
     product_options= db.relationship("Option", backref="product")
     ratings = db.relationship("Rating", backref="product")
     reviews = db.relationship("Review", backref="product")
     
-    def __init__(self, name, botanical_name, origin, desc, image):
+    def __init__(self, name, part, grade, botanical_name, origin, desc, sku, image):
         self.name = name
+        self.part = part
+        self.grade = grade
         self.botanical_name = botanical_name
         self.origin = origin
         self.desc = desc
+        self.sku = sku
         self.image = image
         
     def __repr__(self):
-        return f"<Product product_id={self.product_id} name={self.name} botanical_name={self.botanical_name} origin={self.origin} desc={self.desc} image={self.image}>"
+        return f"<Product product_id={self.product_id} name={self.name} part={self.part} grade={self.grade} botanical_name={self.botanical_name} origin={self.origin} desc={self.desc} sku={self.sku} image={self.image}>"
 
 
 class Option(db.Model):

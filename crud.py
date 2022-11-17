@@ -2,14 +2,14 @@ from model import User, Address, Product, Option, Rating, Review, connect_to_db
 
 
 
-def create_user(email, password):
+def create_user(email, password, first_name, last_name):
 
-    user = User(
+    return User(
         email=email, 
-        password=password
+        password=password,
+        first_name=first_name,
+        last_name=last_name
     )
-
-    return user
 
 def get_users():
 
@@ -25,16 +25,16 @@ def get_user_by_email(email):
 
 
 
-def create_address(street, city, zip_code, state):
+def create_address(street, city, state, postal_code, country, telephone):
 
-    address = Address(
+    return Address(
         street=street, 
         city=city, 
-        zip_code=zip_code, 
-        state=state
+        state=state,
+        postal_code=postal_code,
+        country=country,
+        telephone=telephone
     )
-
-    return address
 
 def get_address():
 
@@ -46,17 +46,18 @@ def get_address_by_id(address_id):
 
 
 
-def create_product(title, botanical_name, origin, desc, image):
+def create_product(name, part, grade, botanical_name, origin, desc, sku, image):
 
-    product = Product(
-        title=title,
+    return Product(
+        name=name,
+        part=part,
+        grade=grade,
         botanical_name=botanical_name,
         origin=origin,
         desc=desc,
+        sku=sku,
         image=image
     )
-
-    return product
 
 def get_products():
 
@@ -70,12 +71,10 @@ def get_product_by_id(product_id):
 
 def create_option(size, price):
 
-    option = Option(
+    return Option(
         size=size, 
         price=price
     )
-
-    return option
 
 def get_option():
 
@@ -89,17 +88,29 @@ def get_option_by_id(option_id):
 
 def create_rating(user, product, score):
 
-    rating = Rating(
+    return Rating(
         user=user, 
         product=product, 
         score=score
     )
 
-    return rating
-
 def update_rating(rating_id, new_score):
     rating = Rating.query.get(rating_id)
     rating.score = new_score
+    
+    
+    
+def create_review(user, product, comment):
+
+    return Review(
+        user=user, 
+        product=product, 
+        comment=comment
+    )
+
+def update_review(review_id, new_comment):
+    review = Review.query.get(review_id)
+    review.comment = new_comment
 
 
 

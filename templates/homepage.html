@@ -1,0 +1,30 @@
+{% extends 'base.html' %} {% block body %}
+
+<div>
+  <div>
+    <div>
+      <h1>keep a full list of all your Movie Ratings!</h1>
+      <p class="welcome-access">Access anywhere. Reference anytime.</p>
+      <p>Ready to start your own ratings!</p>
+      <div>
+        <form action="/users" method="POST">
+          <input
+            class="email"
+            type="text"
+            name="email"
+            placeholder="Email address"
+          />
+          <input
+            class="password"
+            type="password"
+            name="password"
+            placeholder="Password"
+          />
+          <input type="submit" value="Register" />
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

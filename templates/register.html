@@ -1,0 +1,29 @@
+{% extends 'base.html' %}{% block title %}(Placeholder){% endblock %} {% block
+body %}
+<div>
+  <div class="relative">
+    <div class="absolute">
+      <h2>Register</h2>
+      <form
+        class="flex-column register-form-page"
+        action="/users"
+        method="POST"
+      >
+        <input
+          class="register-input"
+          type="text"
+          name="email"
+          placeholder="Email address"
+        />
+        <input
+          class="register-input"
+          type="password"
+          name="password"
+          placeholder="Password"
+        />
+        <input type="submit" value="Register" />
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

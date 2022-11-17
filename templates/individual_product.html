@@ -1,0 +1,30 @@
+{% extends 'base.html' %}{% block title %}(Placeholder){% endblock %} {% block
+body %}
+<div>
+  <img src="{{ product.image }}" />
+  <div>
+    <h1>{{ product.name }}</h1>
+    <p>Part(placeholder)</p>
+    <p>Grade(placeholder)</p>
+    <p>{{ product.desc }}</p>
+    {% if session.get('user_email') %}
+    <form
+      class="flex-row"
+      action="/products/{{ product.product_id }}/ratings"
+      method="POST"
+    >
+      <p class="rating-form">
+        Rate this product
+        <select class="rating" name="rating">
+          <option value="">#</option>
+          {% for num in range(6) %}
+          <option value="{{ num }}">{{ num }}</option>
+          {% endfor %}
+        </select>
+      </p>
+      <p><input class="btn" type="submit" /></p>
+    </form>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
