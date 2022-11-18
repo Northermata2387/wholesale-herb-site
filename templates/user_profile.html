@@ -1,0 +1,50 @@
+{% extends 'base.html' %} {% block title %}(Placeholder){% endblock %} {% block
+body %}
+<div>
+  <img src="{{ user.image }}" />
+  <h1>{{ user.first_name }}</h1>
+  <h1>{{ user.last_name }}</h1>
+</div>
+<div>
+  <p>{{ address.street }}</p>
+  <p>{{ address.city }}</p>
+  <p>{{ address.state }}</p>
+  <p>{{ address.postal_code }}</p>
+  <p>{{ address.country }}</p>
+  <p>{{ address.telephone }}</p>
+</div>
+<div>
+  <ul>
+    {% for rating in user.ratings %}
+    <li>
+      {{ rating.product.name }}:
+      <span {{ rating.rating_id }}> {{ rating.score }} </span>
+      {% if session["user_email"] == user.email %}
+      <button class="edit-product-rating" id="{{ rating.rating_id }}">
+        Edit rating
+      </button>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+
+  <script src="/static/js/updateRatings.js"></script>
+</div>
+<div>
+  <ul>
+    {% for review in user.reviews %}
+    <li>
+      {{ review.product.name }}:
+      <span {{ review.review_id }}> {{ review.comment }} </span>
+      {% if session["user_email"] == user.email %}
+      <button class="edit-product-review" id="{{ review.review_id }}">
+        Edit review
+      </button>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+
+  <script src="/static/js/updateReviews.js"></script>
+</div>
+{% endblock %}

@@ -2,13 +2,14 @@ from model import User, Address, Product, Option, Rating, Review, connect_to_db
 
 
 
-def create_user(email, password, first_name, last_name):
+def create_user(email, password, first_name, last_name, image):
 
     return User(
         email=email, 
         password=password,
         first_name=first_name,
-        last_name=last_name
+        last_name=last_name,
+        image=image
     )
 
 def get_users():
@@ -25,9 +26,10 @@ def get_user_by_email(email):
 
 
 
-def create_address(street, city, state, postal_code, country, telephone):
+def create_address(user_id, street, city, state, postal_code, country, telephone):
 
     return Address(
+        user_id=user_id,
         street=street, 
         city=city, 
         state=state,
@@ -69,28 +71,30 @@ def get_product_by_id(product_id):
 
 
 
-def create_option(size, price):
+def create_product_option(product_id, size, unit, price):
 
     return Option(
-        size=size, 
+        product_id=product_id,
+        size=size,
+        unit=unit,
         price=price
     )
 
-def get_option():
+def get_product_option():
 
     return Option.query.all()
 
-def get_option_by_id(option_id):
+def get_product_option_by_id(option_id):
 
     return Option.query.get(option_id)
 
 
 
-def create_rating(user, product, score):
+def create_rating(user_id, product_id, score):
 
     return Rating(
-        user=user, 
-        product=product, 
+        user_id=user_id, 
+        product_id=product_id, 
         score=score
     )
 
@@ -100,11 +104,11 @@ def update_rating(rating_id, new_score):
     
     
     
-def create_review(user, product, comment):
+def create_review(product_id, user_id, comment):
 
     return Review(
-        user=user, 
-        product=product, 
+        product_id=product_id, 
+        user_id=user_id, 
         comment=comment
     )
 

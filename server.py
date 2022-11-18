@@ -93,6 +93,15 @@ def signout():
     return redirect("/")
 
 
+@app.route("/profile/<user_id>")
+def show_profile(user_id, address_id):
+    
+    user = crud.get_user_by_id(user_id)
+    address = crud.get_address_by_id(address_id)
+    
+    return render_template("user_profile.html", user=user, address=address)
+
+
 @app.route("/update_rating", methods=["POST"])
 def update_rating():
     rating_id = request.json["rating_id"]
@@ -121,7 +130,7 @@ def create_rating(product_id):
         db.session.add(rating)
         db.session.commit()
 
-        flash(f"You rated this product {rating_score} out of 5.")
+        flash(f"You rated this product {rating_score} out of 5")
 
     return redirect(f"/products/{product_id}")
 
@@ -140,24 +149,23 @@ def update_review():
 def create_review(product_id):
 
     logged_in_email = session.get("user_email")
-    review_score = request.form.get("review")
+    review_comment = request.form.get("review")
 
     if logged_in_email is None:
         flash("You must log in to review a product.")
-    elif not review_score:
+    elif not review_comment:
         flash("Oops! You didn't enter a comment for your review.")
     else:
         user = crud.get_user_by_email(logged_in_email)
         product = crud.get_product_by_id(product_id)
 
-        review = crud.create_review(user, product, int(review_score))
+        review = crud.create_review(user, product, int(review_comment))
         db.session.add(review)
         db.session.commit()
 
-        flash(f"You rated this product {review_comment} out of 5.")
+        flash(f"Thank you for your review!")
 
     return redirect(f"/products/{product_id}")
-
 
 
 if __name__ == "__main__":

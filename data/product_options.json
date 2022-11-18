@@ -1,26 +1,362 @@
 [
   {
-    "size": "Placeholder",
-    "price": "Placeholder"
+    "product_id": "1",
+    "size": "4",
+    "unit": "oz",
+    "price": "52.95"
   },
   {
-    "size": "Placeholder",
-    "price": "Placeholder"
+    "product_id": "1",
+    "size": "1",
+    "unit": "lb",
+    "price": "199.95"
   },
   {
-    "size": "Placeholder",
-    "price": "Placeholder"
+    "product_id": "2",
+    "size": "4",
+    "unit": "oz",
+    "price": "52.95"
   },
   {
-    "size": "Placeholder",
-    "price": "Placeholder"
+    "product_id": "2",
+    "size": "1",
+    "unit": "lb",
+    "price": "199.95"
   },
   {
-    "size": "Placeholder",
-    "price": "Placeholder"
+    "product_id": "3",
+    "size": "4",
+    "unit": "oz",
+    "price": "52.95"
   },
   {
-    "size": "Placeholder",
-    "price": "Placeholder"
+    "product_id": "3",
+    "size": "1",
+    "unit": "lb",
+    "price": "199.95"
+  },
+  {
+    "product_id": "4",
+    "size": "4",
+    "unit": "oz",
+    "price": "52.95"
+  },
+  {
+    "product_id": "4",
+    "size": "1",
+    "unit": "lb",
+    "price": "199.95"
+  },
+  {
+    "product_id": "5",
+    "size": "4",
+    "unit": "oz",
+    "price": "52.95"
+  },
+  {
+    "product_id": "5",
+    "size": "1",
+    "unit": "lb",
+    "price": "199.95"
+  },
+  {
+    "product_id": "6",
+    "size": "4",
+    "unit": "oz",
+    "price": "52.95"
+  },
+  {
+    "product_id": "6",
+    "size": "1",
+    "unit": "lb",
+    "price": "199.95"
+  },
+  {
+    "product_id": "7",
+    "size": "4",
+    "unit": "oz",
+    "price": "52.95"
+  },
+  {
+    "product_id": "7",
+    "size": "1",
+    "unit": "lb",
+    "price": "199.95"
+  },
+  {
+    "product_id": "8",
+    "size": "4",
+    "unit": "oz",
+    "price": "52.95"
+  },
+  {
+    "product_id": "8",
+    "size": "1",
+    "unit": "lb",
+    "price": "199.95"
+  },
+  {
+    "product_id": "9",
+    "size": "4",
+    "unit": "oz",
+    "price": "52.95"
+  },
+  {
+    "product_id": "9",
+    "size": "1",
+    "unit": "lb",
+    "price": "199.95"
+  },
+  {
+    "product_id": "10",
+    "size": "4",
+    "unit": "oz",
+    "price": "52.95"
+  },
+  {
+    "product_id": "10",
+    "size": "1",
+    "unit": "lb",
+    "price": "199.95"
+  },
+  {
+    "product_id": "11",
+    "size": "4",
+    "unit": "oz",
+    "price": "52.95"
+  },
+  {
+    "product_id": "11",
+    "size": "1",
+    "unit": "lb",
+    "price": "199.95"
+  },
+  {
+    "product_id": "12",
+    "size": "4",
+    "unit": "oz",
+    "price": "52.95"
+  },
+  {
+    "product_id": "12",
+    "size": "1",
+    "unit": "lb",
+    "price": "199.95"
+  },
+  {
+    "product_id": "13",
+    "size": "4",
+    "unit": "oz",
+    "price": "52.95"
+  },
+  {
+    "product_id": "13",
+    "size": "1",
+    "unit": "lb",
+    "price": "199.95"
+  },
+  {
+    "product_id": "14",
+    "size": "4",
+    "unit": "oz",
+    "price": "52.95"
+  },
+  {
+    "product_id": "14",
+    "size": "1",
+    "unit": "lb",
+    "price": "199.95"
+  },
+  {
+    "product_id": "15",
+    "size": "4",
+    "unit": "oz",
+    "price": "52.95"
+  },
+  {
+    "product_id": "15",
+    "size": "1",
+    "unit": "lb",
+    "price": "199.95"
+  },
+  {
+    "product_id": "16",
+    "size": "4",
+    "unit": "oz",
+    "price": "52.95"
+  },
+  {
+    "product_id": "16",
+    "size": "1",
+    "unit": "lb",
+    "price": "199.95"
+  },
+  {
+    "product_id": "17",
+    "size": "4",
+    "unit": "oz",
+    "price": "52.95"
+  },
+  {
+    "product_id": "17",
+    "size": "1",
+    "unit": "lb",
+    "price": "199.95"
+  },
+  {
+    "product_id": "18",
+    "size": "4",
+    "unit": "oz",
+    "price": "52.95"
+  },
+  {
+    "product_id": "18",
+    "size": "1",
+    "unit": "lb",
+    "price": "199.95"
+  },
+  {
+    "product_id": "19",
+    "size": "4",
+    "unit": "oz",
+    "price": "52.95"
+  },
+  {
+    "product_id": "19",
+    "size": "1",
+    "unit": "lb",
+    "price": "199.95"
+  },
+  {
+    "product_id": "20",
+    "size": "4",
+    "unit": "oz",
+    "price": "52.95"
+  },
+  {
+    "product_id": "20",
+    "size": "1",
+    "unit": "lb",
+    "price": "199.95"
+  },
+  {
+    "product_id": "21",
+    "size": "4",
+    "unit": "oz",
+    "price": "52.95"
+  },
+  {
+    "product_id": "21",
+    "size": "1",
+    "unit": "lb",
+    "price": "199.95"
+  },
+  {
+    "product_id": "22",
+    "size": "4",
+    "unit": "oz",
+    "price": "52.95"
+  },
+  {
+    "product_id": "22",
+    "size": "1",
+    "unit": "lb",
+    "price": "199.95"
+  },
+  {
+    "product_id": "23",
+    "size": "4",
+    "unit": "oz",
+    "price": "52.95"
+  },
+  {
+    "product_id": "23",
+    "size": "1",
+    "unit": "lb",
+    "price": "199.95"
+  },
+  {
+    "product_id": "24",
+    "size": "4",
+    "unit": "oz",
+    "price": "52.95"
+  },
+  {
+    "product_id": "24",
+    "size": "1",
+    "unit": "lb",
+    "price": "199.95"
+  },
+  {
+    "product_id": "25",
+    "size": "4",
+    "unit": "oz",
+    "price": "52.95"
+  },
+  {
+    "product_id": "25",
+    "size": "1",
+    "unit": "lb",
+    "price": "199.95"
+  },
+  {
+    "product_id": "26",
+    "size": "4",
+    "unit": "oz",
+    "price": "52.95"
+  },
+  {
+    "product_id": "26",
+    "size": "1",
+    "unit": "lb",
+    "price": "199.95"
+  },
+  {
+    "product_id": "27",
+    "size": "4",
+    "unit": "oz",
+    "price": "52.95"
+  },
+  {
+    "product_id": "27",
+    "size": "1",
+    "unit": "lb",
+    "price": "199.95"
+  },
+  {
+    "product_id": "28",
+    "size": "4",
+    "unit": "oz",
+    "price": "52.95"
+  },
+  {
+    "product_id": "28",
+    "size": "1",
+    "unit": "lb",
+    "price": "199.95"
+  },
+  {
+    "product_id": "29",
+    "size": "4",
+    "unit": "oz",
+    "price": "52.95"
+  },
+  {
+    "product_id": "29",
+    "size": "1",
+    "unit": "lb",
+    "price": "199.95"
+  },
+  {
+    "product_id": "30",
+    "size": "4",
+    "unit": "oz",
+    "price": "52.95"
+  },
+  {
+    "product_id": "30",
+    "size": "1",
+    "unit": "lb",
+    "price": "199.95"
   }
 ]

@@ -13,19 +13,21 @@ class User(db.Model):
     password = db.Column(db.Text, nullable = False)
     first_name = db.Column(db.String(24), nullable = False)
     last_name = db.Column(db.String(48), nullable = False)
+    image = db.Column(db.String(255))
     
     addresses = db.relationship("Address", backref="user")
     ratings = db.relationship("Rating", backref="user")
     reviews = db.relationship("Review", backref="user")
 
-    def __init__(self, email, password, first_name, last_name):
+    def __init__(self, email, password, first_name, last_name, image):
         self.email = email
         self.password = password
         self.first_name = first_name
         self.last_name = last_name
+        self.image = image 
 
     def __repr__(self):
-        return f"<User user_id={self.user_id} email={self.email} first_name={self.first_name} last_name ={self.last_name} >"
+        return f"<User user_id={self.user_id} email={self.email} first_name={self.first_name} last_name ={self.last_name} image={self.image}>"
     
     
 class Address(db.Model):
@@ -33,15 +35,16 @@ class Address(db.Model):
     __tablename__ = "addresses"
     
     address_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey("users.user_id"))
     street = db.Column(db.String(72), unique = True, nullable = False)
     city = db.Column(db.String(72), nullable = False)
     state = db.Column(db.String(2), nullable = False)
     postal_code = db.Column(db.String(24), nullable = False)
     country = db.Column(db.String(24), nullable = False)
-    telephone = db.Column(db.Integer, nullable = False)
-    user_id = db.Column(db.Integer, db.ForeignKey("users.user_id"))
+    telephone = db.Column(db.String(24), nullable = False)
 
-    def __init__(self, street, city, state, postal_code, country, telephone):
+    def __init__(self, user_id, street, city, state, postal_code, country, telephone):
+        self.user_id=user_id
         self.street = street
         self.city = city
         self.state = state
@@ -90,12 +93,15 @@ class Option(db.Model):
     __tablename__ = "product_options"
     
     product_options_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    size = db.Column(db.Integer, nullable = False)
-    price = db.Column(db.Float, nullable = False)
     product_id = db.Column(db.Integer, db.ForeignKey("products.product_id"))
+    size = db.Column(db.Integer, nullable = False)
+    unit = db.Column(db.String(24), nullable = False)
+    price = db.Column(db.Float, nullable = False)
         
-    def __init__(self, size, price):
+    def __init__(self, product_id, size, unit, price):
+        self.product_id = product_id
         self.size = size
+        self.unit = unit
         self.price = price
         
     def __repr__(self):
@@ -107,11 +113,13 @@ class Rating(db.Model):
     __tablename__ = "ratings"
 
     rating_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    score = db.Column(db.Integer)
-    product_id = db.Column(db.Integer, db.ForeignKey("products.product_id"))
     user_id = db.Column(db.Integer, db.ForeignKey("users.user_id"))
+    product_id = db.Column(db.Integer, db.ForeignKey("products.product_id"))
+    score = db.Column(db.Integer)
     
-    def __init__(self, score):
+    def __init__(self, user_id, product_id, score):
+        self.user_id= user_id,
+        self.product_id =product_id,
         self.score = score
     
     def __repr__(self):
@@ -123,11 +131,13 @@ class Review(db.Model):
     __tablename__ = "reviews"
 
     review_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    comment = db.Column(db.String(255))
     product_id = db.Column(db.Integer, db.ForeignKey("products.product_id"))
     user_id = db.Column(db.Integer, db.ForeignKey("users.user_id"))
+    comment = db.Column(db.String(255))
 
-    def __init__(self, comment):
+    def __init__(self, product_id, user_id, comment):
+        self.product_id = product_id
+        self.user_id =user_id
         self.comment = comment
         
     def __repr__(self):

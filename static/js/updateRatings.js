@@ -1,9 +1,9 @@
-editButtons = document.querySelectorAll(".edit-movie-rating");
+editButtons = document.querySelectorAll(".edit-product-rating");
 
 for (const button of editButtons) {
   button.addEventListener("click", () => {
     // first ask the user what they want the new rating to be
-    const newScore = prompt("What is your new score for this movie?");
+    const newScore = prompt("What is your new score for this product?");
     const formInputs = {
       updated_score: newScore,
       rating_id: button.id,
