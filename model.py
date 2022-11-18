@@ -1,15 +1,14 @@
+from os import environ
 from flask_sqlalchemy import SQLAlchemy
 
-from os import environ
-
-
 db = SQLAlchemy()
+
 
 class User(db.Model):
 
     __tablename__ = "users"
 
-    id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    user_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     email = db.Column(db.String(255), unique = True, nullable = False)
     password = db.Column(db.Text, nullable = False)
     first_name = db.Column(db.String(24), nullable = False)
@@ -35,8 +34,8 @@ class Address(db.Model):
 
     __tablename__ = "addresses"
     
-    id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
+    address_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey("users.user_id"))
     street = db.Column(db.String(72), unique = True, nullable = False)
     city = db.Column(db.String(72), nullable = False)
     state = db.Column(db.String(2), nullable = False)
@@ -61,7 +60,7 @@ class Product(db.Model):
 
     __tablename__ = "products"
     
-    id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    product_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     name = db.Column(db.String(255), nullable = False)
     part = db.Column(db.String(255))
     grade = db.Column(db.String(255))
@@ -93,8 +92,8 @@ class Option(db.Model):
 
     __tablename__ = "product_options"
     
-    id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    product_id = db.Column(db.Integer, db.ForeignKey("products.id"))
+    product_options_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    product_id = db.Column(db.Integer, db.ForeignKey("products.product_id"))
     size = db.Column(db.Integer, nullable = False)
     unit = db.Column(db.String(24), nullable = False)
     price = db.Column(db.Float, nullable = False)
@@ -113,9 +112,9 @@ class Rating(db.Model):
 
     __tablename__ = "ratings"
 
-    id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
-    product_id = db.Column(db.Integer, db.ForeignKey("products.id"))
+    rating_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey("users.user_id"))
+    product_id = db.Column(db.Integer, db.ForeignKey("products.product_id"))
     score = db.Column(db.Integer)
     
     def __init__(self, user_id, product_id, score):
@@ -131,9 +130,9 @@ class Review(db.Model):
 
     __tablename__ = "reviews"
 
-    id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    product_id = db.Column(db.Integer, db.ForeignKey("products.id"))
-    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
+    review_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    product_id = db.Column(db.Integer, db.ForeignKey("products.product_id"))
+    user_id = db.Column(db.Integer, db.ForeignKey("users.user_id"))
     comment = db.Column(db.String(255))
 
     def __init__(self, product_id, user_id, comment):
