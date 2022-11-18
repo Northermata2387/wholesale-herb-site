@@ -1,8 +1,9 @@
-from os import environ
 from flask_sqlalchemy import SQLAlchemy
 
-db = SQLAlchemy()
+from os import environ
 
+
+db = SQLAlchemy()
 
 class User(db.Model):
 

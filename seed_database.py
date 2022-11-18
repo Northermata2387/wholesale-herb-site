@@ -3,15 +3,14 @@ from random import choice, randint
 
 import model
 import server
+from crud import create
 
 import json
 import csv
 
-import crud
 
 os.system("dropdb rising-sun-herbs")
 os.system("createdb rising-sun-herbs")
-
 
 model.connect_to_db(server.app, echo=False)
 
@@ -37,7 +36,7 @@ with server.app.app_context():
                 product["image"]
             )
 
-            db_product = crud.create_product(name, part, grade, botanical_name, origin, desc, sku, image)
+            db_product = create.create_product(name, part, grade, botanical_name, origin, desc, sku, image)
             products_in_db.append(db_product)
 
     model.db.session.add_all(products_in_db)
@@ -57,7 +56,7 @@ with server.app.app_context():
                 product_option["price"]
             )
 
-            db_product_option = crud.create_product_option(product_id, size, unit, price)
+            db_product_option = create.create_product_option(product_id, size, unit, price)
             product_options_in_db.append(db_product_option)
 
     model.db.session.add_all(product_options_in_db)
@@ -78,7 +77,7 @@ with server.app.app_context():
                 user["image"]
             )
 
-            db_user = crud.create_user(email, password, first_name, last_name, image)
+            db_user = create.create_user(email, password, first_name, last_name, image)
             users_in_db.append(db_user)
     
     model.db.session.add_all(users_in_db)
@@ -101,7 +100,7 @@ with server.app.app_context():
                 address["telephone"]
             )
 
-            db_address = crud.create_address(user_id, street, city, state, postal_code, country, telephone)
+            db_address = create.create_address(user_id, street, city, state, postal_code, country, telephone)
             addresses_in_db.append(db_address)
     
     model.db.session.add_all(addresses_in_db)
@@ -120,7 +119,7 @@ with server.app.app_context():
                 review["comment"]
             )
 
-            db_review = crud.create_review(product_id, user_id, comment)
+            db_review = create.create_review(product_id, user_id, comment)
             reviews_in_db.append(db_review)
 
     model.db.session.add_all(reviews_in_db)
@@ -134,7 +133,7 @@ with server.app.app_context():
         product_id = choice(products_in_db).product_id
         score = randint(1, 5)
 
-        rating = crud.create_rating(user_id, product_id, score)
+        rating = create.create_rating(user_id, product_id, score)
         model.db.session.add(rating)
 
     model.db.session.commit()
