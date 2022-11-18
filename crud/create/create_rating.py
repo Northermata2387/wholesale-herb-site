@@ -1,4 +1,4 @@
-from model import Rating
+from model import Rating, connect_to_db
 
 
 def create_rating(user_id, product_id, score):
@@ -8,3 +8,8 @@ def create_rating(user_id, product_id, score):
         product_id=product_id, 
         score=score
     )
+
+
+if __name__ == '__main__':
+    from server import app
+    connect_to_db(app)

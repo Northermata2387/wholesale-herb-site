@@ -1,4 +1,4 @@
-from model import User
+from model import User, connect_to_db
 
 
 def create_user(email, password, first_name, last_name, image):
@@ -10,3 +10,8 @@ def create_user(email, password, first_name, last_name, image):
         last_name=last_name,
         image=image
     )
+
+
+if __name__ == '__main__':
+    from server import app
+    connect_to_db(app)

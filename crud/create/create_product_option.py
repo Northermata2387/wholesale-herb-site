@@ -1,4 +1,4 @@
-from model import Option
+from model import Option, connect_to_db
 
 
 def create_product_option(product_id, size, unit, price):
@@ -9,3 +9,8 @@ def create_product_option(product_id, size, unit, price):
         unit=unit,
         price=price
     )
+
+
+if __name__ == '__main__':
+    from server import app
+    connect_to_db(app)
