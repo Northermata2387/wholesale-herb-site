@@ -17,7 +17,7 @@
     "origin": "India",
     "desc": "The Ashwagandha plant is a five foot tall evergreen shrub that grows in Asia and Africa. It is a small evergreen shrub that is short and squat with velvety leaves and bell flowers that contain orange berries similar in appearance to small tomatoes. The herb is also known as Indian ginseng or winter cherry.",
     "sku": "SRH-0552-2",
-    "image": "https://t4.ftcdn.net/jpg/04/70/49/19/240_F_470491905_lJfIazUdZ93DMPgOpwXBEAEUdHr0tgbT.jpg"
+    "image": "https://cdn11.bigcommerce.com/s-8466dwhhql/images/stencil/1024x1024/products/497/670/Ashwagandha_Root_OG_2019-04-10__56482.1588112686.jpg?c=1"
   },
   {
     "name": "Ashwagandha",
@@ -27,276 +27,276 @@
     "origin": "India",
     "desc": "The Ashwagandha is a small perennial shrub and a member of the Nightshade family. Other members of the Nightshade family include tomatoes, potatoes, and eggplant. It has been used for centuries throughout India and Africa, and has been featured in Ayurvedic texts dating back to 600 A.D.",
     "sku": "SRH-0552-4",
-    "image": "https://t3.ftcdn.net/jpg/01/27/03/78/240_F_127037840_PobTvHfoAoyPdkD1Yx80Oys7Ygm2o4B4.jpg"
+    "image": "https://cdn11.bigcommerce.com/s-8466dwhhql/images/stencil/1024x1024/products/498/671/Ashwagandha_Powder_OG_2019-04-11__20511.1588112864.jpg?c=1"
   },
   {
     "name": "Birch",
     "part": "Bark",
     "grade": "Powder",
-    "botanical_name": "Placeholder",
-    "origin": "Placeholder",
+    "botanical_name": "Betula lenta",
+    "origin": "USA",
     "desc": "Placeholder",
     "sku": "SRH-0635-4",
-    "image": "Placeholder"
+    "image": "https://cdn11.bigcommerce.com/s-8466dwhhql/images/stencil/2048x2048/products/515/688/Birch_Bark_Powder_NOG_2019-04-25__14789.1588179166.jpg?c=1"
   },
   {
     "name": "Black Cohosh",
     "part": "Roots",
     "grade": "Crushed",
-    "botanical_name": "Placeholder",
-    "origin": "Placeholder",
-    "desc": "Placeholder",
+    "botanical_name": "Actaea racemosa",
+    "origin": "USA",
+    "desc": "Black Cohosh is native to central and eastern North America and grows in shaded woodland habitats. Named for its black and twisting rhizome, the root is typically made into a tea or an extract.",
     "sku": "SRH-0722-2",
-    "image": "Placeholder"
+    "image": "https://cdn11.bigcommerce.com/s-8466dwhhql/images/stencil/2048x2048/products/519/692/Black_Cohosh_Root_OG_2019-05-07__82686.1588182004.jpg?c=1"
   },
   {
     "name": "Blue Cohosh",
     "part": "Roots",
     "grade": "Crushed",
-    "botanical_name": "Placeholder",
-    "origin": "Placeholder",
-    "desc": "Placeholder",
+    "botanical_name": "Caulophyllum thalictroides",
+    "origin": "USA",
+    "desc": "Native to the woodlands of eastern North America, it's named after its bright blue berries which ripen in the fall. Blue cohosh is a woodland plant in the same family as barberry, goldenseal, and Oregon grape root.",
     "sku": "SRH-0732-2",
-    "image": "Placeholder"
+    "image": "https://cdn11.bigcommerce.com/s-8466dwhhql/images/stencil/1024x1024/products/976/825/Blue_Cohosh_Root_NOG_2019-06-13__76747.1588371817.jpg?c=1"
   },
   {
     "name": "Cacao",
     "part": "Beans",
     "grade": "Whole",
-    "botanical_name": "Placeholder",
-    "origin": "Placeholder",
-    "desc": "Placeholder",
+    "botanical_name": "Theobroma cacao",
+    "origin": "Peru",
+    "desc": "These cacao beans are unprocessed and dried on a low temperature in order to preserve the most beneficial properties. Enjoy using the whole bean as is, coarsely ground in trail mixes, or finely ground in drinks.",
     "sku": "SRH-0792-1",
-    "image": "Placeholder"
+    "image": "https://cdn11.bigcommerce.com/s-8466dwhhql/images/stencil/1024x1024/products/987/829/Cacao_Beans_Raw_OG_2019-05-05__75305.1623180141.jpg?c=1"
   },
   {
     "name": "Calendula",
     "part": "Flowers",
     "grade": "Whole",
-    "botanical_name": "Placeholder",
-    "origin": "Placeholder",
-    "desc": "Placeholder",
+    "botanical_name": "Calendula officinalis",
+    "origin": "Morocco",
+    "desc": "Commonly referred to as marigold, calendula is an annual herb bearing the characteristic daisy-like flowers of other members of its family, having bright orange or yellow terminal flower heads and pale green leaves. Calendula flowers can be infused in oils and incorporated into lotions, creams, and balms.",
     "sku": "SRH-0833-1",
-    "image": "Placeholder"
+    "image": "https://cdn11.bigcommerce.com/s-8466dwhhql/images/stencil/1024x1024/products/557/2561/Calendula_Flowers_26291__02159.1617734405.jpg?c=1"
   },
   {
     "name": "Dandelion",
     "part": "Roots",
     "grade": "Crushed",
-    "botanical_name": "Placeholder",
-    "origin": "Placeholder",
-    "desc": "Placeholder",
+    "botanical_name": "Taraxacum officinale",
+    "origin": "USA",
+    "desc": "The dandelion root is organically cultivated in the United States and can be used as dandelion tea, added to herbal tea blends, made into dandelion extract, or infused into body care recipes.",
     "sku": "SRH-0862-2",
-    "image": "Placeholder"
+    "image": "https://cdn11.bigcommerce.com/s-8466dwhhql/images/stencil/1024x1024/products/622/803/dandelion_root_2019-02-04__55295.1588364646.jpg?c=1"
   },
   {
     "name": "Elder",
     "part": "Flowers",
     "grade": "Whole",
-    "botanical_name": "Placeholder",
-    "origin": "Placeholder",
-    "desc": "Placeholder",
+    "botanical_name": "Sambucus nigra & S. ebulus",
+    "origin": "Albania",
+    "desc": " Thes flowers are most commonly infused as tea or included in herbal infusion blends. Historically they have been infused into ales, cordials, vinegars, and water. Also they have been used for making preserves, wines, and winter cordials.",
     "sku": "SRH-0893-1",
-    "image": "Placeholder"
+    "image": "https://cdn11.bigcommerce.com/s-8466dwhhql/images/stencil/1024x1024/products/642/853/Elder_Flowers_2019-11-15__52282.1588616467.jpg?c=1"
   },
   {
     "name": "Galangal",
     "part": "Roots",
     "grade": "Crushed",
-    "botanical_name": "Placeholder",
-    "origin": "Placeholder",
-    "desc": "Placeholder",
+    "botanical_name": "Alpinia galanga",
+    "origin": "India",
+    "desc": "Galangal is a tropical shrub with lance-like leaves, iris-like flowers, and reddish brown, woody rhizomes. It grows mainly in the Eastern Himalayas and Southwest India. A member of the ginger family, galangal roots are aromatic and have a sweet and spicy flavor.",
     "sku": "SRH-0942-2",
-    "image": "Placeholder"
+    "image": "https://cdn11.bigcommerce.com/s-8466dwhhql/images/stencil/1024x1024/products/664/1942/Galangal_Root_25021-C__41628.1594059230.jpg?c=1"
   },
   {
     "name": "Kava Kava",
     "part": "Roots",
     "grade": "Crushed",
-    "botanical_name": "Placeholder",
-    "origin": "Placeholder",
-    "desc": "Placeholder",
+    "botanical_name": "Piper methysticum",
+    "origin": "Vanuatu",
+    "desc": "Kava kava is a traditional herb native to the Pacific Islands where it has been used as a social and ceremonial drink with fascinating and somewhat mysterious history going back over 3000 years. It is typically prepared as a decoction and can also be used in tincturing.",
     "sku": "SRH-0982-2",
-    "image": "Placeholder"
+    "image": "https://cdn11.bigcommerce.com/s-8466dwhhql/images/stencil/1024x1024/products/717/941/kava_kava_19-03-12__10378.1588715196.jpg?c=1"
   },
   {
     "name": "Licorice",
     "part": "Roots",
     "grade": "Crushed",
-    "botanical_name": "Placeholder",
-    "origin": "Placeholder",
-    "desc": "Placeholder",
+    "botanical_name": "Glycyrrhiza glabra",
+    "origin": "Uzbekistan",
+    "desc": "Licorice root is one of the most widely used herbs worldwide and is the single most used herb in China today. Licorice is a favorite ingredient to sweeten herbal tea blends and often used as a flavoring in candy.",
     "sku": "SRH-1042-2",
-    "image": "Placeholder"
+    "image": "https://cdn11.bigcommerce.com/s-8466dwhhql/images/stencil/1024x1024/products/734/3019/Licorice_Root_2022-03-21__72563.1647873962.jpg?c=1"
   },
   {
     "name": "Lime",
     "part": "Peels",
     "grade": "Powder",
-    "botanical_name": "Placeholder",
-    "origin": "Placeholder",
-    "desc": "Placeholder",
+    "botanical_name": "Citrus x aurantifolia",
+    "origin": "Sri Lanka",
+    "desc": "The rind's unique flavor has accents of tart and bitter notes. It's a great addition to soaps, lotions, bath scrubs, and other body care products. They can also be added to smoothies, baked goods, desserts, and teas.",
     "sku": "SRH-1085-4",
-    "image": "Placeholder"
+    "image": "https://cdn11.bigcommerce.com/s-8466dwhhql/images/stencil/1024x1024/products/736/964/Lime_Peel_Powder_OG_2019-05-09__07058.1588779368.jpg?c=1"
   },
   {
     "name": "Marshmallow",
     "part": "Leafs",
     "grade": "Crushed",
-    "botanical_name": "Placeholder",
-    "origin": "Placeholder",
-    "desc": "Placeholder",
+    "botanical_name": "Althaea officinalis",
+    "origin": "USA",
+    "desc": "Marshmallow leaves can be used topically in skin care recipes, blended into herbal syrups, or infused as marshmallow tea. Its flowers which form clusters at leaf axils or panicles, and are similar to, yet smaller than, other flowers. Marshmallow leaves can be used topically in skin care recipes, blended into herbal syrups, or infused as marshmallow tea.",
     "sku": "SRH-1127-2",
-    "image": "Placeholder"
+    "image": "https://cdn11.bigcommerce.com/s-8466dwhhql/images/stencil/1024x1024/products/751/981/marshmallow_leaf_2019-01-31__59382.1588788196.jpg?c=1"
   },
   {
     "name": "Milk Thistle",
     "part": "Seeds",
     "grade": "Whole",
-    "botanical_name": "Placeholder",
-    "origin": "Placeholder",
-    "desc": "Placeholder",
+    "botanical_name": "Silybum marianum",
+    "origin": "Croatia",
+    "desc": "Milk Thistle is native to the Mediterranean region and southwestern Europe and has been widely cultivated for hundreds of years. The seeds are typically decocted as milk thistle tea and can also be powdered for tinctures or encapsulated.",
     "sku": "SRH-1156-1",
-    "image": "Placeholder"
+    "image": "https://cdn11.bigcommerce.com/s-8466dwhhql/images/stencil/1024x1024/products/760/3048/Milk_Thistle_Seed_OG_26858-D__14976.1652891491.jpg?c=1"
   },
   {
     "name": "Moringa",
     "part": "Leafs",
     "grade": "Crushed",
-    "botanical_name": "Placeholder",
-    "origin": "Placeholder",
-    "desc": "Placeholder",
+    "botanical_name": "Moringa oleifera",
+    "origin": "India",
+    "desc": "Moringa leaves and seed pods are often eaten for their nutritious value and the roots made into a pungent condiment. The tree is in the Moringaceae, or horseradish family which is closely related to the papaya family.",
     "sku": "SRH-1197-2",
-    "image": "Placeholder"
+    "image": "https://cdn11.bigcommerce.com/s-8466dwhhql/images/stencil/1024x1024/products/763/1000/Moringa_Leaf_OG_2020-02-28__76180.1588804605.jpg?c=1"
   },
   {
     "name": "Moringa",
     "part": "Leafs",
     "grade": "Powder",
-    "botanical_name": "Placeholder",
-    "origin": "Placeholder",
-    "desc": "Placeholder",
+    "botanical_name": "Moringa oleifera",
+    "origin": "Sri Lanka",
+    "desc": "Moringa is a tree that has been used for thousands of years in India for everything from food, to building materials, and also for its beneficial properties. Moringa leaf powder can be incorporated into culinary dishes, added to smoothies, or blended into juices.",
     "sku": "SRH-1197-4",
-    "image": "Placeholder"
+    "image": "https://cdn11.bigcommerce.com/s-8466dwhhql/images/stencil/1024x1024/products/764/1001/Moringa_Leaf_Powder_OG_2019-05-03__71217.1588804748.jpg?c=1"
   },
   {
     "name": "Mugwort",
     "part": "Leafs",
     "grade": "Ground",
-    "botanical_name": "Placeholder",
-    "origin": "Placeholder",
-    "desc": "Placeholder",
+    "botanical_name": "Artemisia vulgaris",
+    "origin": "USA",
+    "desc": "Mugwort is said to have derived its name from having been used to flavor beer before the wide use of hops. Mugwort herb is commonly brewed into mugwort tea and can also be used as incense, incorporated into dream pillows, and infused into botanical vinegars.",
     "sku": "SRH-1227-3",
-    "image": "Placeholder"
+    "image": "https://cdn11.bigcommerce.com/s-8466dwhhql/images/stencil/1024x1024/products/766/3125/Mugwort_26940-C__28984.1666375462.jpg?c=1"
   },
   {
     "name": "Mullein",
     "part": "Leafs",
     "grade": "Ground",
-    "botanical_name": "Placeholder",
-    "origin": "Placeholder",
-    "desc": "Placeholder",
+    "botanical_name": "Verbascum thapsus",
+    "origin": "Chili",
+    "desc": "The silvery green leaves and bright yellow flowers of mullein have been utilized for thousands of years in herbal traditions. Mullein herb can be macerated into mullein extract, brewed as mullein leaf tea, or made into syrup.",
     "sku": "SRH-1257-3",
-    "image": "Placeholder"
+    "image": "https://cdn11.bigcommerce.com/s-8466dwhhql/images/stencil/1024x1024/products/769/1007/mullein_leaf_2019-01-31__67372.1588872234.jpg?c=1"
   },
   {
     "name": "Nettle",
     "part": "Leafs",
     "grade": "Crushed",
-    "botanical_name": "Placeholder",
-    "origin": "Placeholder",
-    "desc": "Placeholder",
+    "botanical_name": "Urtica dioica",
+    "origin": "Hungary",
+    "desc": "It has been eaten as a wild food plant, applied topically to the skin. It was used extensively for its fibers and was woven into cloth. The leaves can be steeped as nettle tea, incorporated into herbal infusion blends, and added to soups and broths.",
     "sku": "SRH-1457-2",
-    "image": "Placeholder"
+    "image": "https://cdn11.bigcommerce.com/s-8466dwhhql/images/stencil/1024x1024/products/772/1015/nettle_leaf_2019-02-05__32848.1612220303.jpg?c=1"
   },
   {
     "name": "Nettle",
     "part": "Leafs",
     "grade": "Powder",
-    "botanical_name": "Placeholder",
-    "origin": "Placeholder",
-    "desc": "Placeholder",
+    "botanical_name": "Urtica dioica",
+    "origin": "Hungary",
+    "desc": " Nettle has been foraged for centuries for its nourishing properties as a springtime food. It can be added directly into culinary dishes including soups, stews, rice, and smoothies.",
     "sku": "SRH-1457-4",
-    "image": "Placeholder"
+    "image": "https://cdn11.bigcommerce.com/s-8466dwhhql/images/stencil/1024x1024/products/773/1022/Nettle_Leaf_Powder_OG_2019-04-16__48225.1588881868.jpg?c=1"
   },
   {
     "name": "Osha",
     "part": "Roots",
     "grade": "Whole",
-    "botanical_name": "Placeholder",
-    "origin": "Placeholder",
-    "desc": "Placeholder",
+    "botanical_name": "Ligusticum porteri",
+    "origin": "Canada",
+    "desc": " It is a member of the Apiaceae or carrot family, which is reflected in its appearance. Its coveted spicy, warming, and bitter root is fibrous with a wrinkly dark brown exterior. Most commonly it is made into tea, crafted into syrup with honey, ground into a powder, or tinctured.",
     "sku": "SRH-1642-1",
-    "image": "Placeholder"
+    "image": "https://cdn11.bigcommerce.com/s-8466dwhhql/images/stencil/1024x1024/products/1913/3039/Osha_lot27579_2022-04-06__86586.1652300801.jpg?c=1"
   },
   {
     "name": "Passionflower",
     "part": "Flowers",
     "grade": "Crushed",
-    "botanical_name": "Placeholder",
-    "origin": "Placeholder",
-    "desc": "Placeholder",
+    "botanical_name": " Passiflora incarnata",
+    "origin": "Italy",
+    "desc": " This vining plant has showy, intricate flowers. Our organic passionflower can be tinctured, steeped as passionflower tea, and incorporated into herbal infusions.",
     "sku": "SRH-1763-2",
-    "image": "Placeholder"
+    "image": "https://cdn11.bigcommerce.com/s-8466dwhhql/images/stencil/1024x1024/products/801/1048/passionflower_19-03-27__80692.1588890795.jpg?c=1"
   },
   {
     "name": "Patchouli",
     "part": "Leafs",
     "grade": "Crushed",
-    "botanical_name": "Placeholder",
-    "origin": "Placeholder",
-    "desc": "Placeholder",
+    "botanical_name": "Pogostemon cablin",
+    "origin": "India",
+    "desc": "Patchouli leaf can be used to scent incense blends, potpourri, botanical sachets, soaps, lotions, deodorants, and other skin care products. Patchouli is a member of the mint family and has been used for centuries in perfume and incense.",
     "sku": "SRH-1947-2",
-    "image": "Placeholder"
+    "image": "https://cdn11.bigcommerce.com/s-8466dwhhql/images/stencil/1024x1024/products/803/1050/Patchouli_Leaf_OG_2019-08-22__22490.1588892197.jpg?c=1"
   },
   {
     "name": "Pau d' Arco",
     "part": "Bark",
     "grade": "Shaved",
-    "botanical_name": "Placeholder",
-    "origin": "Placeholder",
-    "desc": "Placeholder",
+    "botanical_name": "Tabebuia impetiginosa",
+    "origin": "Brazil",
+    "desc": "The pau d'arco tree is a huge canopy tree that grows up to 125 feet high, with pink to violet colored flowers. Pau d'arco bark can be tinctured, incorporated into topical skin care regimes, or decocted as pau d'arco tea.",
     "sku": "SRH-2149-5",
-    "image": "Placeholder"
+    "image": "https://cdn11.bigcommerce.com/s-8466dwhhql/images/stencil/1024x1024/products/804/1051/pau_d_arco_2019-02-05__64900.1588892432.jpg?c=1"
   },
   {
     "name": "Sage",
     "part": "Leafs",
     "grade": "Ground",
-    "botanical_name": "Placeholder",
-    "origin": "Placeholder",
-    "desc": "Placeholder",
+    "botanical_name": "Salvia officinalis",
+    "origin": "Albania",
+    "desc": "For centuries, Sage has been a choice herb to flavor meals. Its unmistakable peppery flavor makes it popular for use in stuffing and other hardier dishes. Sage leaves can be infused as tea, macerated as an extract, and used as a culinary spice.",
     "sku": "SRH-2318-1",
-    "image": "Placeholder"
+    "image": "https://cdn11.bigcommerce.com/s-8466dwhhql/images/stencil/1024x1024/products/846/1106/Sage_Leaf_OG_2019-11-04__49498.1589308507.jpg?c=1"
   },
   {
     "name": "Shiitake",
     "part": "Mushrooms",
     "grade": "Whole",
-    "botanical_name": "Placeholder",
-    "origin": "Placeholder",
-    "desc": "Placeholder",
+    "botanical_name": "Lentinula edodes",
+    "origin": "China",
+    "desc": "Shiitake is native to parts of Asia but are now grown around the globe, becoming the second most cultivated mushroom worldwide. Reconstituted dried shiitake mushrooms can be sautéed with vegetables, tofu, or added to soups, sauces, and stir fries. Thry can also be infused into broths or enjoyed as an earthy tea.",
     "sku": "SRH-2468-1",
-    "image": "Placeholder"
+    "image": "https://cdn11.bigcommerce.com/s-8466dwhhql/images/stencil/1024x1024/products/868/2075/Shiitake_Mushrooms_26209__17213.1601584908.jpg?c=1"
   },
   {
     "name": "Turmeric",
     "part": "Roots",
     "grade": "Crushed",
-    "botanical_name": "Placeholder",
-    "origin": "Placeholder",
-    "desc": "Placeholder",
+    "botanical_name": "Curcuma longa",
+    "origin": "India",
+    "desc": "Known for its bright orange-yellow color, turmeric root is employed as both an earthy spice as well as a dye. Our organic turmeric can be used to flavor foods like curries and rice dishes or beverages like golden milk and turmeric chai.",
     "sku": "SRH-2592-2",
-    "image": "Placeholder"
+    "image": "https://cdn11.bigcommerce.com/s-8466dwhhql/images/stencil/1024x1024/products/899/1177/turmeric_root_19-03-08__22562.1589486815.jpg?c=1"
   },
   {
     "name": "Valerian",
     "part": "Roots",
-    "grade": "Shaved",
-    "botanical_name": "Placeholder",
-    "origin": "Placeholder",
-    "desc": "Placeholder",
-    "sku": "SRH-2662-5",
-    "image": "Placeholder"
+    "grade": "Crushed",
+    "botanical_name": "Valeriana officinalis",
+    "origin": "USA",
+    "desc": "Valerian has pleasant, sweet smelling flowers and pungently aromatic roots. ommonly infused as valerian tea, the roots can also be mixed into herbal tea blends or tinctured.",
+    "sku": "SRH-2662-2",
+    "image": "https://cdn11.bigcommerce.com/s-8466dwhhql/images/stencil/1024x1024/products/903/1182/Valerian_Root_OG_2019-08-22__61086.1589489958.jpg?c=1"
   }
 ]

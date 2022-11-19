@@ -8,7 +8,7 @@ class User(db.Model):
 
     __tablename__ = "users"
 
-    user_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     email = db.Column(db.String(255), unique = True, nullable = False)
     password = db.Column(db.Text, nullable = False)
     first_name = db.Column(db.String(24), nullable = False)
@@ -34,8 +34,8 @@ class Address(db.Model):
 
     __tablename__ = "addresses"
     
-    address_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    user_id = db.Column(db.Integer, db.ForeignKey("users.user_id"))
+    id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
     street = db.Column(db.String(72), unique = True, nullable = False)
     city = db.Column(db.String(72), nullable = False)
     state = db.Column(db.String(2), nullable = False)
@@ -60,7 +60,7 @@ class Product(db.Model):
 
     __tablename__ = "products"
     
-    product_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     name = db.Column(db.String(255), nullable = False)
     part = db.Column(db.String(255))
     grade = db.Column(db.String(255))
@@ -92,8 +92,8 @@ class Option(db.Model):
 
     __tablename__ = "product_options"
     
-    product_options_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    product_id = db.Column(db.Integer, db.ForeignKey("products.product_id"))
+    id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    product_id = db.Column(db.Integer, db.ForeignKey("products.id"))
     size = db.Column(db.Integer, nullable = False)
     unit = db.Column(db.String(24), nullable = False)
     price = db.Column(db.Float, nullable = False)
@@ -112,9 +112,9 @@ class Rating(db.Model):
 
     __tablename__ = "ratings"
 
-    rating_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    user_id = db.Column(db.Integer, db.ForeignKey("users.user_id"))
-    product_id = db.Column(db.Integer, db.ForeignKey("products.product_id"))
+    id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
+    product_id = db.Column(db.Integer, db.ForeignKey("products.id"))
     score = db.Column(db.Integer)
     
     def __init__(self, user_id, product_id, score):
@@ -130,9 +130,9 @@ class Review(db.Model):
 
     __tablename__ = "reviews"
 
-    review_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    product_id = db.Column(db.Integer, db.ForeignKey("products.product_id"))
-    user_id = db.Column(db.Integer, db.ForeignKey("users.user_id"))
+    id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    product_id = db.Column(db.Integer, db.ForeignKey("products.id"))
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
     comment = db.Column(db.String(255))
 
     def __init__(self, product_id, user_id, comment):

@@ -130,8 +130,8 @@ with server.app.app_context():
     rating_count = 60
 
     for _ in range(rating_count):
-        user_id = choice(users_in_db).user_id
-        product_id = choice(products_in_db).product_id
+        user_id = choice(users_in_db).id
+        product_id = choice(products_in_db).id
         score = randint(1, 5)
 
         rating = crud.create_rating(user_id, product_id, score)
