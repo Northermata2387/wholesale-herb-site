@@ -26,10 +26,13 @@ with server.app.app_context():
         product_data = json.loads(products_json.read())
         
         for product in product_data:
-            name, part, grade, botanical_name, origin, desc, sku, image = (
+            name, part, grade, size, unit, price, botanical_name, origin, desc, sku, image = (
                 product["name"],
                 product["part"],
                 product["grade"],
+                product["size"],
+                product["unit"],
+                product["price"],
                 product["botanical_name"],
                 product["origin"],
                 product["desc"],
@@ -37,30 +40,10 @@ with server.app.app_context():
                 product["image"]
             )
 
-            db_product = crud.create_product(name, part, grade, botanical_name, origin, desc, sku, image)
+            db_product = crud.create_product(name, part, grade, size, unit, price, botanical_name, origin, desc, sku, image)
             products_in_db.append(db_product)
 
     model.db.session.add_all(products_in_db)
-    model.db.session.commit()
-    
-    
-    product_options_in_db = []
-    
-    with open("data/product_options.json") as product_options_json:
-        product_option_data = json.loads(product_options_json.read())
-        
-        for product_option in product_option_data:
-            product_id, size, unit, price = (
-                product_option["product_id"],
-                product_option["size"],
-                product_option["unit"],
-                product_option["price"]
-            )
-
-            db_product_option = crud.create_product_option(product_id, size, unit, price)
-            product_options_in_db.append(db_product_option)
-
-    model.db.session.add_all(product_options_in_db)
     model.db.session.commit()
     
     

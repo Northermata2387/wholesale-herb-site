@@ -25,9 +25,6 @@ def all_products():
 @app.route("/cart")
 def cart():
     
-    if 'username' not in session:
-        return redirect("/login")
-    
     order_total = 0
     cart_products = []
     
@@ -64,9 +61,6 @@ def add_to_cart(product_id):
 
 @app.route("/empty-cart")
 def empty_cart():
-    
-    if 'username' not in session:
-        return redirect("/login")
     
     session["cart"] = {}
 
@@ -149,6 +143,13 @@ def show_profile():
     
     
     return render_template("user_profile.html")
+
+
+# @app.route("/profile", methods=["POST"])
+# def show_profile():
+    
+    
+#     return render_template("user_profile.html")
 
 
 @app.route("/update_rating", methods=["POST"])

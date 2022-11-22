@@ -23,12 +23,13 @@ block body %}
             />
           </a>
         </div>
+        <p>SKU: {{ product.sku }}</p>
         <h4>
           {{ product.name }} {{ product.part }} {{ product.grade }}
         </h4>
-        <p>Placeholder(size=price)</p>
+        <p>{{ product.size }} {{ product.unit }}: ${{ product.price }}</p>
         <a href="{{ url_for('add_to_cart', product_id=product.id) }}"
-          >Add to Cart {{ product.price }}</a
+          >Add to Cart</a
         >
       </div>
     </li loading="lazy">

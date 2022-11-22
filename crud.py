@@ -1,4 +1,4 @@
-from model import User, Address, Product, Option, Rating, Review, connect_to_db
+from model import User, Address, Product, Rating, Review, connect_to_db
 
 
 
@@ -27,10 +27,6 @@ def get_user_by_id(user_id):
 
     return User.query.get(user_id)
 
-# def get_users():
-
-#     return User.query.all()
-
 
 def create_address(user_id, street, city, state, postal_code, country, telephone):
 
@@ -54,12 +50,15 @@ def create_address(user_id, street, city, state, postal_code, country, telephone
 
 
 
-def create_product(name, part, grade, botanical_name, origin, desc, sku, image):
+def create_product(name, part, grade, size, unit, price, botanical_name, origin, desc, sku, image):
 
     return Product(
         name=name,
         part=part,
         grade=grade,
+        size=size,
+        unit=unit,
+        price=price,
         botanical_name=botanical_name,
         origin=origin,
         desc=desc,
@@ -75,24 +74,6 @@ def get_product_by_id(product_id):
 
     return Product.query.get(product_id)
 
-
-
-def create_product_option(product_id, size, unit, price):
-
-    return Option(
-        product_id=product_id,
-        size=size,
-        unit=unit,
-        price=price
-    )
-
-# def get_product_option():
-
-#     return Option.query.all()
-
-def get_product_option_by_id(option_id):
-
-    return Option.query.get(option_id)
 
 
 
