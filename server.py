@@ -22,6 +22,57 @@ def all_products():
     return render_template("all_products.html", products=products)
 
 
+@app.route("/cart")
+def cart():
+    
+    if 'username' not in session:
+        return redirect("/login")
+    
+    order_total = 0
+    cart_products = []
+    
+    cart = session.get("cart", {})
+    
+    for product_id, quantity in cart.items():
+        product = crud.get_product_by_id(product_id)
+
+        total_cost = quantity * product.price
+        order_total += total_cost
+
+        product.quantity = quantity
+        product.total_cost = total_cost
+
+        cart_products.append(product)
+    
+    return render_template("cart.html", cart_products=cart_products, order_total=order_total)
+
+
+@app.route("/add_to_cart/<product_id>")
+def add_to_cart(product_id):
+    
+    if 'cart' not in session:
+        session['cart'] = {}
+    cart = session['cart']
+    
+    cart[product_id] = cart.get(product_id, 0) + 1
+    session.modified = True
+    flash(f"product {product_id} successfully added to cart.")
+    print(cart)
+
+    return redirect("/cart")
+
+
+@app.route("/empty-cart")
+def empty_cart():
+    
+    if 'username' not in session:
+        return redirect("/login")
+    
+    session["cart"] = {}
+
+    return redirect("/cart")
+
+
 @app.route("/")
 def homepage():
     
@@ -47,12 +98,12 @@ def register_user():
 
     email = request.form.get("email")
     password = request.form.get("password")
-
+    
     user = crud.get_user_by_email(email)
     if user:
         flash("Your account already exists. Please Sing In")
     else:
-        user = crud.create_user(email, password)
+        user = crud.create_user_form(email, password)
         db.session.add(user)
         db.session.commit()
         flash("Account created! Please Sign In")
@@ -93,13 +144,11 @@ def signout():
     return redirect("/")
 
 
-@app.route("/profile/<user_id>")
-def show_profile(user_id, address_id):
+@app.route("/profile")
+def show_profile():
     
-    user = crud.get_user_by_id(user_id)
-    address = crud.get_address_by_id(address_id)
     
-    return render_template("user_profile.html", user=user, address=address)
+    return render_template("user_profile.html")
 
 
 @app.route("/update_rating", methods=["POST"])

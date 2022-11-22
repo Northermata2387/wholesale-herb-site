@@ -1,1 +1,33 @@
-{% extends 'base.html' %} {% block body %} {% endblock %}
+{% extends 'base.html' %} {% block body %}
+<div>
+  <h1>Cart Details</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Product Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for product in cart_products %}
+      <tr>
+        <td>{{ product.name }}</td>
+        <td>{{ product.quantity }}</td>
+        <div>
+          <td>${{ "%0.2f" | format(product.price) }}</td>
+          <td>${{ "%0.2f" | format(product.total_cost) }}</td>
+        </div>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <div class="total">
+    <h3>Gross Total:</h3>
+    <h3 class="total-cost">${{ "%0.2f" | format(order_total) }}</h3>
+  </div>
+
+  <a href="/empty-cart" class="empty-cart">Clear Entire Order</a>
+</div>
+{% endblock %}

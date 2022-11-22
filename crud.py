@@ -11,19 +11,25 @@ def create_user(email, password, first_name, last_name, image):
         last_name=last_name,
         image=image
     )
+    
+def get_user_by_email(email):
 
-def get_users():
+    return User.query.filter(User.email == email).first()
 
-    return User.query.all()
+def create_user_form(email, password):
+
+    return User(
+        email=email, 
+        password=password
+    )
 
 def get_user_by_id(user_id):
 
     return User.query.get(user_id)
 
-def get_user_by_email(email):
+# def get_users():
 
-    return User.query.filter(User.email == email).first()
-
+#     return User.query.all()
 
 
 def create_address(user_id, street, city, state, postal_code, country, telephone):
@@ -38,13 +44,13 @@ def create_address(user_id, street, city, state, postal_code, country, telephone
         telephone=telephone
     )
 
-def get_address():
+# def get_address():
 
-    return Address.query.all()
+#     return Address.query.all()
 
-def get_address_by_id(address_id):
+# def get_address_by_id(address_id):
 
-    return User.query.get(address_id)
+#     return User.query.get(address_id)
 
 
 
@@ -80,9 +86,9 @@ def create_product_option(product_id, size, unit, price):
         price=price
     )
 
-def get_product_option():
+# def get_product_option():
 
-    return Option.query.all()
+#     return Option.query.all()
 
 def get_product_option_by_id(option_id):
 

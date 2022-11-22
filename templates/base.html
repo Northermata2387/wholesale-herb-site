@@ -20,20 +20,27 @@
   <body>
     <nav>
       <div>
+        <p>Free shipping on orders over $50</p>
+      </div>
+      <div>
+        <a href="{{ url_for('all_products') }}">Herbs</a>
+      </div>
+      <div>
         <a href="{{ url_for('homepage') }}">
           <img src="" alt="sun rise herbs logo" />
           <p>Sun Rise Herbs</p>
         </a>
       </div>
       <div>
-        <a href="{{ url_for('all_products') }}">Herbs</a>
+        <a href="{{ url_for('show_profile') }}">Profile</a>
         <div>
           {% if 'user_email' in session %}
-          <a href="/signout">Signed Out</a>
+          <a href="/signout">Sign Out</a>
           {% else %}
           <a href="/signin">Sign In</a>
           {% endif %}
         </div>
+        <a href="{{ url_for('cart') }}">Cart</a>
       </div>
     </nav>
     <main>

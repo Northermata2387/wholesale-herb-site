@@ -11,20 +11,13 @@ class User(db.Model):
     id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     email = db.Column(db.String(255), unique = True, nullable = False)
     password = db.Column(db.Text, nullable = False)
-    first_name = db.Column(db.String(24), nullable = False)
-    last_name = db.Column(db.String(48), nullable = False)
-    image = db.Column(db.String(255))
+    first_name = db.Column(db.String(24), nullable = True)
+    last_name = db.Column(db.String(48), nullable = True)
+    image = db.Column(db.String(255), nullable = True)
     
     addresses = db.relationship("Address", backref="user")
     ratings = db.relationship("Rating", backref="user")
     reviews = db.relationship("Review", backref="user")
-
-    def __init__(self, email, password, first_name, last_name, image):
-        self.email = email
-        self.password = password
-        self.first_name = first_name
-        self.last_name = last_name
-        self.image = image 
 
     def __repr__(self):
         return f"<User user_id={self.user_id} email={self.email} first_name={self.first_name} last_name ={self.last_name} image={self.image}>"

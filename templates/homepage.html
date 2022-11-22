@@ -1,27 +1,51 @@
 {% extends 'base.html' %} {% block body %}
-
 <div>
   <div>
     <div>
-      <div>
-        <form action="/users" method="POST">
-          <input
-            class="email"
-            type="text"
-            name="email"
-            placeholder="Email address"
-          />
-          <input
-            class="password"
-            type="password"
-            name="password"
-            placeholder="Password"
-          />
-          <input type="submit" value="Register" />
-        </form>
-      </div>
+      <p>Interested in an Account?</p>
+      <p>Discover our bulk herbs in the sizes and quantities you need.</p>
+      <p>
+        <a href="{{ url_for('register') }}">Register an account</a>
+      </p>
+    </div>
+    <div>
+      <img
+        src="https://images.unsplash.com/photo-1514733670139-4d87a1941d55?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=878&q=80"
+        alt=""
+      />
+    </div>
+  </div>
+  <div>
+    <div>
+      <h1>New Lower Pricing on 50% of Herbs!</h1>
+    </div>
+      <p>
+        <a href="{{ url_for('all_products') }}">Shop All</a>
+      </p>
+    </div>
+  </div>
+  <div>
+    <div>
+      <p>Our Commitment To You</p>
+      <p>
+        Ethical Sourcing of the highest quality herbs, spices, oils and teas.
+      </p>
+      <ol>
+        <li>✔ 100% Satisfaction Guarantee</li>
+        <li>✔ #1 Supplier of Organic Herbs in USA</li>
+        <li>✔ Trusted Quality Since 1975</li>
+        <li>✔ Free Shipping on Orders over $75</li>
+      </ol>
+      <p>
+        <a href="{{ url_for('all_products') }}">Shop Now</a>
+      </p>
+    </div>
+    <div>
+      <img
+        src="https://images.unsplash.com/photo-1492552085122-36706c238263?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1197&q=80"
+        alt=""
+      />
     </div>
   </div>
 </div>
-
 {% endblock %}
