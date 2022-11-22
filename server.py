@@ -59,10 +59,13 @@ def add_to_cart(product_id):
     return redirect("/cart")
 
 
-@app.route("/empty-cart")
-def empty_cart():
+@app.route("/empty-cart-item")
+def remove_cart_product(product_id):
     
-    session["cart"] = {}
+    # crud.delete_cart_item(product_id)
+    # flash(f"Item has been removed.")
+    
+    session["cart"].pop(product_id)
 
     return redirect("/cart")
 

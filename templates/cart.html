@@ -4,7 +4,11 @@
   <table>
     <thead>
       <tr>
-        <th>Product Name</th>
+        <th>Name</th>
+        <th>Part</th>
+        <th>Grade</th>
+        <th>Size</th>
+        <th>Unit</th>
         <th>Quantity</th>
         <th>Price</th>
         <th>Total</th>
@@ -14,20 +18,44 @@
       {% for product in cart_products %}
       <tr>
         <td>{{ product.name }}</td>
+        <td>{{ product. part }}</td>
+        <td>{{ product.grade }}</td>
+        <td>{{ product.size }}</td>
+        <td>{{ product.unit }}</td>
         <td>{{ product.quantity }}</td>
         <div>
           <td>${{ "%0.2f" | format(product.price) }}</td>
           <td>${{ "%0.2f" | format(product.total_cost) }}</td>
         </div>
+        <td>
+          <form action="/empty-cart-item" method="POST">
+            <input class="remove" type="submit" value="Remove" />
+          </form>
+        </td>
       </tr>
       {% endfor %}
     </tbody>
   </table>
-  <div class="total">
-    <h3>Gross Total:</h3>
-    <h3 class="total-cost">${{ "%0.2f" | format(order_total) }}</h3>
+  <div class="flex-row">
+    <div>
+      <p><a href="{{ url_for('all_products') }}">Continue Shopping</a></p>
+    </div>
+    <div class="flex-row">
+      <p>Subtotal:</p>
+      <p>${{ "%0.2f" | format(order_total) }}</p>
+    </div>
+    <div class="flex-row">
+      <p>Tax</p>
+      <p>(calculated at checkout)</p>
+    </div>
+    <div class="flex-row">
+      <p>Shipping</p>
+      <p>(calculated at checkout)</p>
+    </div>
+    <div class="flex-row">
+      <p>Gross Total:</p>
+      <p>${{ "%0.2f" | format(order_total) }}</p>
+    </div>
   </div>
-
-  <a href="/empty-cart" class="empty-cart">Clear Entire Order</a>
 </div>
 {% endblock %}

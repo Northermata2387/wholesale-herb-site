@@ -1,19 +1,22 @@
 {% extends 'base.html' %}{% block title %}(Placeholder){% endblock %} {% block
 body %}
 <div>
-  <div class="flex-row">
+  <div>
     <div>
       <img class="indv-product-image" src="{{ product.image }}" />
     </div>
     <div>
-      <h1>{{ product.name }} {{ product.part }} {{ product.grade }}</h1>
-      <p>{{ product.desc }}</p>
-      <p>{{ product.botanical_name}}</p>
-      <p>{{ product.origin}}</p>
-      <p>{{ product.sku}}</p>
-      <a href="{{ url_for('add_to_cart', product_id=product.id) }}"
-        >Add to Cart {{ product.price }}</a
-      >
+      <div>
+        <h1>{{ product.name }} {{ product.part }} {{ product.grade }}</h1>
+        <p>{{ product.botanical_name}}</p>
+        <p>{{ product.origin}}</p>
+        <p>{{ product.sku}}</p>
+        <p>{{ product.desc }}</p>
+        <p>{{ product.size }} {{ product.unit }}: ${{ product.price }}</p>
+        <a href="{{ url_for('add_to_cart', product_id=product.id) }}"
+          >Add to Cart</a
+        >
+      </div>
     </div>
   </div>
 </div>
