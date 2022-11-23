@@ -28,7 +28,9 @@ def cart():
     order_total = 0
     cart_products = []
     
-    for product_id, quantity in session['cart'].items():
+    cart = session.get("cart", {})
+    
+    for product_id, quantity in cart.items():
         product = crud.get_product_by_id(product_id)
 
         total_cost = quantity * product.price
@@ -60,6 +62,7 @@ def add_to_cart(product_id):
 def empty_cart():
     
     session["cart"] = {}
+    flash("Your Cart is empty, please choose a product...")
 
     return redirect("/products")
 
@@ -68,14 +71,15 @@ def empty_cart():
 @app.route("/")
 def homepage():
     
-    return render_template("homepage.html")
+    products = crud.get_products()
+    
+    return render_template("homepage.html", products=products)
 
 
 @app.route("/products/<product_id>")
 def show_product(product_id):
 
     product = crud.get_product_by_id(product_id)
-    reviews = crud.get_review_by_product(product_id)
     
     ratings = crud.get_rating_by_product(product_id)
     total = 0
@@ -85,8 +89,10 @@ def show_product(product_id):
         avg = total/len(ratings)
     else:
         avg = -1
+        
+    reviews = crud.get_review_by_product(product_id)
 
-    return render_template("individual_product.html", product=product, reviews=reviews, avg=avg)
+    return render_template("individual_product.html", product=product, avg=avg, reviews=reviews)
 
 
 @app.route("/register")
@@ -144,12 +150,6 @@ def signout():
     del session["user_email"]
     flash("You have Signed Out")
     return redirect("/")
-
-
-@app.route("/profile")
-def show_profile():
-    
-    return render_template("user_profile.html")
 
 
 # @app.route("/profile", methods=["POST"])

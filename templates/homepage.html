@@ -19,6 +19,18 @@
     <div>
       <h1>New Lower Pricing on 50% of Herbs!</h1>
     </div>
+    <div>
+      {% for product in products[3:25:7] %}
+      <div>
+        <ul class="style-type">
+          <a href="/products/{{ product.id }}">
+            <li><img class="products-image" src="{{ product.image }}" /></li>
+            <li>{{ product.name }} {{ product.part }} {{ product.grade }}</li>
+            <li>${{ product.price }}</li>
+          </a>
+        </ul>
+      </div>
+      {% endfor %}
       <p>
         <a href="{{ url_for('all_products') }}">Shop All</a>
       </p>
@@ -26,14 +38,12 @@
   </div>
   <div>
     <div>
-      <p>Our Commitment To You</p>
-      <p>
-        Ethical Sourcing of the highest quality herbs, spices, oils and teas.
-      </p>
-      <ol>
-        <li>✔ 100% Satisfaction Guarantee</li>
-        <li>✔ #1 Supplier of Organic Herbs in USA</li>
-        <li>✔ Trusted Quality Since 1975</li>
+      <p>Beleive in Quality!</p>
+      <p>We source all of our premium herbs ethically and thoughtfully</p>
+      <ol class="style-type">
+        <li>✔ 100% Satisfaction</li>
+        <li>✔ #1 Supplier of Herbs in USA</li>
+        <li>✔ Trusted Quality by every buyer</li>
         <li>✔ Free Shipping on Orders over $75</li>
       </ol>
       <p>

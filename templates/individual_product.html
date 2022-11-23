@@ -1,5 +1,4 @@
-{% extends 'base.html' %}{% block title %}(Placeholder){% endblock %} {% block
-body %}
+{% extends 'base.html' %} {% block body %}
 <div>
   <div>
     <div>
@@ -25,9 +24,13 @@ body %}
         >
       </div>
       <div>
-        <ul>
+        <ul class="style-type" loading="lazy">
           {% for review in reviews %}
-          <li>{{ reviews_id }}</li>
+          <li>{{ review.user_id }}</li>
+          <li>Placeholder(date)</li>
+          <li>Placeholder(title)</li>
+          <li>{{ review.comment }}</li>
+          <li>{{ review.product_id }}</li>
           {% endfor %}
         </ul>
       </div>

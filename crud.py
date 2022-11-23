@@ -11,17 +11,20 @@ def create_user(email, password, first_name, last_name, image):
         last_name=last_name,
         image=image
     )
-    
-def get_user_by_email(email):
-
-    return User.query.filter(User.email == email).first()
-
 def create_user_form(email, password):
 
     return User(
         email=email, 
         password=password
     )
+    
+def get_user_by_email(email):
+
+    return User.query.filter(User.email == email).first()
+
+def get_user():
+
+    return User.query.all()
 
 
 
