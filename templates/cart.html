@@ -12,13 +12,17 @@
         <th>Quantity</th>
         <th>Price</th>
         <th>Total</th>
+        <th>
+          <button>
+            <a href="/empty-cart" class="empty-cart">Remove All</a></th>
+          </button>
       </tr>
     </thead>
     <tbody>
       {% for product in cart_products %}
       <tr>
         <td>{{ product.name }}</td>
-        <td>{{ product. part }}</td>
+        <td>{{ product.part }}</td>
         <td>{{ product.grade }}</td>
         <td>{{ product.size }}</td>
         <td>{{ product.unit }}</td>
@@ -27,11 +31,6 @@
           <td>${{ "%0.2f" | format(product.price) }}</td>
           <td>${{ "%0.2f" | format(product.total_cost) }}</td>
         </div>
-        <td>
-          <form action="/empty-cart-item" method="POST">
-            <input class="remove" type="submit" value="Remove" />
-          </form>
-        </td>
       </tr>
       {% endfor %}
     </tbody>

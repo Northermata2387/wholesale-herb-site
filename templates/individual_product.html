@@ -8,6 +8,13 @@ body %}
     <div>
       <div>
         <h1>{{ product.name }} {{ product.part }} {{ product.grade }}</h1>
+        <div>
+          {%if avg >= 0%}
+          <p>Rated a {{ "%0.1f" | format(avg) }}</p>
+          {%else%}
+          <p>No Ratings</p>
+          {%endif%}
+        </div>
         <p>{{ product.botanical_name}}</p>
         <p>{{ product.origin}}</p>
         <p>{{ product.sku}}</p>
@@ -17,7 +24,14 @@ body %}
           >Add to Cart</a
         >
       </div>
+      <div>
+        <ul>
+          {% for review in reviews %}
+          <li>{{ reviews_id }}</li>
+          {% endfor %}
+        </ul>
+      </div>
     </div>
   </div>
+  {% endblock %}
 </div>
-{% endblock %}

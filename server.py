@@ -28,9 +28,7 @@ def cart():
     order_total = 0
     cart_products = []
     
-    cart = session.get("cart", {})
-    
-    for product_id, quantity in cart.items():
+    for product_id, quantity in session['cart'].items():
         product = crud.get_product_by_id(product_id)
 
         total_cost = quantity * product.price
@@ -53,21 +51,18 @@ def add_to_cart(product_id):
     
     cart[product_id] = cart.get(product_id, 0) + 1
     session.modified = True
-    flash(f"product {product_id} successfully added to cart.")
-    print(cart)
+    flash(f"Herb added to cart!")
 
-    return redirect("/cart")
+    return redirect("/products")
 
 
-@app.route("/empty-cart-item")
-def remove_cart_product(product_id):
+@app.route("/empty-cart")
+def empty_cart():
     
-    # crud.delete_cart_item(product_id)
-    # flash(f"Item has been removed.")
-    
-    session["cart"].pop(product_id)
+    session["cart"] = {}
 
-    return redirect("/cart")
+    return redirect("/products")
+
 
 
 @app.route("/")
@@ -80,8 +75,18 @@ def homepage():
 def show_product(product_id):
 
     product = crud.get_product_by_id(product_id)
+    reviews = crud.get_review_by_product(product_id)
+    
+    ratings = crud.get_rating_by_product(product_id)
+    total = 0
+    for rating in ratings:
+        total = total + rating.score
+    if len(ratings) != 0:
+        avg = total/len(ratings)
+    else:
+        avg = -1
 
-    return render_template("individual_product.html", product=product)
+    return render_template("individual_product.html", product=product, reviews=reviews, avg=avg)
 
 
 @app.route("/register")
@@ -143,7 +148,6 @@ def signout():
 
 @app.route("/profile")
 def show_profile():
-    
     
     return render_template("user_profile.html")
 
@@ -222,5 +226,5 @@ def create_review(product_id):
 
 
 if __name__ == "__main__":
-    connect_to_db(app)
+    connect_to_db(app, echo=False)
     app.run(host="0.0.0.0", debug=True)

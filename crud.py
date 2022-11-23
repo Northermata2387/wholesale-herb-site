@@ -23,9 +23,6 @@ def create_user_form(email, password):
         password=password
     )
 
-# def get_user_by_id(user_id):
-
-#     return User.query.get(user_id)
 
 
 def create_product(name, part, grade, size, unit, price, botanical_name, origin, desc, sku, image):
@@ -60,7 +57,6 @@ def delete_cart_item(product_id):
     db.session.commit()
 
 
-##################################################
 
 def create_address(user_id, street, city, state, postal_code, country, telephone):
 
@@ -74,13 +70,6 @@ def create_address(user_id, street, city, state, postal_code, country, telephone
         telephone=telephone
     )
 
-# def get_address():
-
-#     return Address.query.all()
-
-# def get_address_by_id(address_id):
-
-#     return User.query.get(address_id)
 
 
 def create_rating(user_id, product_id, score):
@@ -90,13 +79,11 @@ def create_rating(user_id, product_id, score):
         product_id=product_id, 
         score=score
     )
+    
+def get_rating_by_product(product_id):
+    return Rating.query.filter_by(product_id=product_id).all()
 
-def update_rating(rating_id, new_score):
-    rating = Rating.query.get(rating_id)
-    rating.score = new_score
-    
-    
-    
+
 def create_review(product_id, user_id, comment):
 
     return Review(
@@ -105,12 +92,23 @@ def create_review(product_id, user_id, comment):
         comment=comment
     )
 
-def update_review(review_id, new_comment):
-    review = Review.query.get(review_id)
-    review.comment = new_comment
+def get_review_by_product(product_id):
 
+    return Review.query.filter_by(product_id=product_id).all()
 
 
 if __name__ == '__main__':
     from server import app
     connect_to_db(app)
+
+##################################################
+
+
+def update_rating(rating_id, new_score):
+    rating = Rating.query.get(rating_id)
+    rating.score = new_score
+    
+
+def update_review(review_id, new_comment):
+    review = Review.query.get(review_id)
+    review.comment = new_comment

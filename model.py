@@ -14,10 +14,6 @@ class User(db.Model):
     first_name = db.Column(db.String(24), nullable = True)
     last_name = db.Column(db.String(48), nullable = True)
     image = db.Column(db.String(255), nullable = True)
-    
-    addresses = db.relationship("Address", backref="user")
-    ratings = db.relationship("Rating", backref="user")
-    reviews = db.relationship("Review", backref="user")
 
     def __repr__(self):
         return f"<User user_id={self.user_id} email={self.email} first_name={self.first_name} last_name ={self.last_name} image={self.image}>"
@@ -35,6 +31,8 @@ class Address(db.Model):
     postal_code = db.Column(db.String(24), nullable = True)
     country = db.Column(db.String(24), nullable = True)
     telephone = db.Column(db.String(24), nullable = True)
+    
+    user = db.relationship("User", backref="addresses")
 
     def __init__(self, user_id, street, city, state, postal_code, country, telephone):
         self.user_id=user_id
@@ -65,9 +63,6 @@ class Product(db.Model):
     desc = db.Column(db.Text, nullable = False)
     sku = db.Column(db.String(255), unique = True, nullable = False)
     image = db.Column(db.String(255), nullable = False)
-
-    ratings = db.relationship("Rating", backref="product")
-    reviews = db.relationship("Review", backref="product")
     
     def __init__(self, name, part, grade, size, unit, price, botanical_name, origin, desc, sku, image):
         self.name = name
@@ -96,6 +91,9 @@ class Rating(db.Model):
     product_id = db.Column(db.Integer, db.ForeignKey("products.id"))
     score = db.Column(db.Integer)
     
+    user = db.relationship("User", backref="ratings")
+    product = db.relationship("Product", backref="ratings")
+    
     def __init__(self, user_id, product_id, score):
         self.user_id= user_id,
         self.product_id =product_id,
@@ -113,6 +111,9 @@ class Review(db.Model):
     product_id = db.Column(db.Integer, db.ForeignKey("products.id"))
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
     comment = db.Column(db.String(255))
+    
+    user = db.relationship("User", backref="reviews")
+    product = db.relationship("Product", backref="reviews")
 
     def __init__(self, product_id, user_id, comment):
         self.product_id = product_id
