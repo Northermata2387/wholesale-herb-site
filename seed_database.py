@@ -97,13 +97,15 @@ with server.app.app_context():
         review_data = json.loads(reviews_json.read())
         
         for review in review_data:
-            product_id, user_id, comment = (
+            product_id, user_id, date, title, comment = (
                 review["product_id"],
                 review["user_id"],
+                review["date"],
+                review["title"],
                 review["comment"]
             )
 
-            db_review = crud.create_review(product_id, user_id, comment)
+            db_review = crud.create_review(product_id, user_id, date, title, comment)
             reviews_in_db.append(db_review)
 
     model.db.session.add_all(reviews_in_db)

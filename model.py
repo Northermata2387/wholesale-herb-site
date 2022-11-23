@@ -110,18 +110,22 @@ class Review(db.Model):
     id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     product_id = db.Column(db.Integer, db.ForeignKey("products.id"))
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
+    date = db.Column(db.String(255))
+    title = db.Column(db.String(255))
     comment = db.Column(db.String(255))
     
     user = db.relationship("User", backref="reviews")
     product = db.relationship("Product", backref="reviews")
 
-    def __init__(self, product_id, user_id, comment):
+    def __init__(self, product_id, user_id, date, title, comment):
         self.product_id = product_id
         self.user_id =user_id
+        self.date = date
+        self.title = title
         self.comment = comment
         
     def __repr__(self):
-        return f"<Review review_id ={self.review_id } comment={self.comment}>"
+        return f"<Review review_id ={self.review_id } date={self.date} title={self.title} comment={self.comment}>"
     
 
 def connect_to_db(flask_app, db_uri=environ["POSTGRES_URI"], echo=True):

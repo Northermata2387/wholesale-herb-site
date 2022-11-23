@@ -26,11 +26,11 @@
       <div>
         <ul class="style-type" loading="lazy">
           {% for review in reviews %}
-          <li>{{ review.user_id }}</li>
-          <li>Placeholder(date)</li>
-          <li>Placeholder(title)</li>
+          <li>{{ review.user.first_name }}</li>
+          <li>{{ review.date }}</li>
+          <li>{{ review.title }}</li>
           <li>{{ review.comment }}</li>
-          <li>{{ review.product_id }}</li>
+          <li>{{ product.name }} {{ product.part }} {{ product.grade }}</li>
           {% endfor %}
         </ul>
       </div>

@@ -26,6 +26,9 @@ def get_user():
 
     return User.query.all()
 
+def get_user_by_review(review_id):
+
+    return User.query.filter_by(review_id=review_id).all()
 
 
 def create_product(name, part, grade, size, unit, price, botanical_name, origin, desc, sku, image):
@@ -87,11 +90,13 @@ def get_rating_by_product(product_id):
     return Rating.query.filter_by(product_id=product_id).all()
 
 
-def create_review(product_id, user_id, comment):
+def create_review(product_id, user_id, date, title, comment):
 
     return Review(
         product_id=product_id, 
-        user_id=user_id, 
+        user_id=user_id,
+        date=date,
+        title=title,
         comment=comment
     )
 

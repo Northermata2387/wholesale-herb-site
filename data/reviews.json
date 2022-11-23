@@ -2,71 +2,99 @@
   {
     "product_id": "1",
     "user_id": "6",
+    "date": "08/15/2021",
+    "title": "Potent Herb!",
     "comment": "These Arnica flowers are exactly the aroma and potency I was looking for."
   },
   {
     "product_id": "1",
     "user_id": "12",
+    "date": "04/30/2020",
+    "title": "Love This Product",
     "comment": "Sun Rise Herbs is awesome and I was happy to order from them again."
   },
   {
     "product_id": "1",
     "user_id": "18",
+    "date": "04/29/2020",
+    "title": "Good quality",
     "comment": "Their quality of herbs is above reproach and I would never hesitate to order anything from them."
   },
   {
     "product_id": "7",
     "user_id": "6",
+    "date": "12/29/2021",
+    "title": "All Top Notch",
     "comment": "Yummy!!!"
   },
   {
     "product_id": "7",
     "user_id": "10",
+    "date": "04/03/2022",
+    "title": "Best Bean out there!",
     "comment": "Some of the freshest Cacao Beans I have ever used."
   },
   {
     "product_id": "8",
     "user_id": "12",
+    "date": "03/09/2022",
+    "title": "Fast Shipping!",
     "comment": "Arrived in a few days and they look like great quality."
   },
   {
     "product_id": "8",
     "user_id": "18",
-    "comment": "Absolutely wonderful; love grinding fresh for AM coffee."
+    "date": "06/21/2022",
+    "title": "Love these herbs",
+    "comment": "Absolutely wonderful; love grinding fresh for AM tea."
   },
   {
     "product_id": "8",
     "user_id": "6",
+    "date": "05/19/2021",
+    "title": "Best morning Blend!",
     "comment": "I use them in a smoothie they are really good."
   },
   {
     "product_id": "25",
     "user_id": "12",
+    "date": "02/18/2022",
+    "title": "Love to chat with their customer service",
     "comment": "Great quality, thank you so much for fast shipping."
   },
   {
     "product_id": "25",
     "user_id": "18",
+    "date": "06/10/2022",
+    "title": "Great place for natural bulk herbs",
     "comment": "Smells so good... thank you I love it ."
   },
   {
     "product_id": "25",
     "user_id": "6",
+    "date": "07/13/2021",
+    "title": "Great Experience",
     "comment": "Top-quality herb, lightning-fast shipping, fantastic packaging, and perfect all around!"
   },
   {
     "product_id": "28",
     "user_id": "12",
+    "date": "10/18/2021",
+    "title": "Best products for DIY",
     "comment": "Lots of flavor. I use these in everything. Great price!."
   },
   {
     "product_id": "28",
     "user_id": "18",
+    "date": "04/01/2022",
+    "title": "Awesome and amazing company",
     "comment": "Sun Rise Herbs shitake mushrooms are among the best that I have ordered on line. A bit pricey, but worth every penny. I will continue to order."
   },
   {
     "product_id": "28",
     "user_id": "6",
+    "date": "10/22/2022",
+    "title": "Quality products",
     "comment": "I love these mushrooms, I used them in soup and also in a saute and both recipes came out great. Will definitely order again."
   }
 ]
