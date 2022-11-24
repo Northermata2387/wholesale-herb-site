@@ -18,34 +18,6 @@ class User(db.Model):
     def __repr__(self):
         return f"<User user_id={self.user_id} email={self.email} first_name={self.first_name} last_name ={self.last_name} image={self.image}>"
     
-    
-class Address(db.Model):
-
-    __tablename__ = "addresses"
-    
-    id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
-    street = db.Column(db.String(72), unique = True, nullable = True)
-    city = db.Column(db.String(72), nullable = True)
-    state = db.Column(db.String(2), nullable = True)
-    postal_code = db.Column(db.String(24), nullable = True)
-    country = db.Column(db.String(24), nullable = True)
-    telephone = db.Column(db.String(24), nullable = True)
-    
-    user = db.relationship("User", backref="addresses")
-
-    def __init__(self, user_id, street, city, state, postal_code, country, telephone):
-        self.user_id=user_id
-        self.street = street
-        self.city = city
-        self.state = state
-        self.postal_code = postal_code
-        self.country = country
-        self.telephone = telephone
-        
-    def __repr__(self):
-        return f"<Address address_id={self.address_id} street={self.street} city={self.city} state={self.state} postal_code={self.postal_code} country={self.country} telephone={self.telephone}>"
-
 
 class Product(db.Model):
 

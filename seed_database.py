@@ -66,29 +66,6 @@ with server.app.app_context():
     
     model.db.session.add_all(users_in_db)
     model.db.session.commit()
-    
-    
-    addresses_in_db = []
-    
-    with open("data/address.csv", "r") as address_csv:
-        address_data = csv.DictReader(address_csv)
-        
-        for address in address_data:
-            user_id, street, city, state, postal_code, country, telephone= (
-                address["user_id"],
-                address["street"],
-                address["city"],
-                address["state"],
-                address["postal_code"],
-                address["country"],
-                address["telephone"]
-            )
-
-            db_address = crud.create_address(user_id, street, city, state, postal_code, country, telephone)
-            addresses_in_db.append(db_address)
-    
-    model.db.session.add_all(addresses_in_db)
-    model.db.session.commit()
 
 
     reviews_in_db = []
