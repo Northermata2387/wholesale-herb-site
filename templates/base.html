@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,31 +22,34 @@
     <title>{% block title %}Sun Rise Herbs{% endblock %}</title>
   </head>
   <body>
-    <nav>
-      <div>
-        <p>Free shipping on orders over $50</p>
+    <nav class="top-banner fixed roboto">
+      <div class="sales-banner">
+        <p>Free shipping on orders over $50 *Terms and Conditions Apply*</p>
       </div>
-      <div>
-        <a href="{{ url_for('all_products') }}">Herbs</a>
-      </div>
-      <div>
-        <a href="{{ url_for('homepage') }}">
-          <img src="" alt="sun rise herbs logo" />
-          <p>Sun Rise Herbs</p>
-        </a>
-      </div>
-      <div>
+      <div class="navbar flex-row">
+        <div>
+          <a class="indv-a-link herbs-link" href="{{ url_for('all_products') }}"
+            >Bulk Herbs</a
+          >
+        </div>
+        <div>
+          <a class="indv-a-link home-link" href="{{ url_for('homepage') }}"
+            >Sun Rise Herbs</a
+          >
+        </div>
         <div>
           {% if 'user_email' in session %}
-          <a href="/signout">Sign Out</a>
+          <a class="indv-a-link sign-link" href="/signout">Sign Out</a>
           {% else %}
-          <a href="/signin">Sign In</a>
+          <a class="indv-a-link sign-link" href="/signin">Sign In</a>
           {% endif %}
         </div>
-        <a href="{{ url_for('cart') }}">Cart</a>
+        <div>
+          <a class="indv-a-link" href="{{ url_for('cart') }}">Cart</a>
+        </div>
       </div>
     </nav>
-    <main>
+    <main class="body-margin">
       <div>
         {% for msg in get_flashed_messages() %}
         <p>{{ msg }}</p>
@@ -50,5 +57,69 @@
       </div>
       {% block body %}{% endblock %} {% block after_body %}{% endblock %}
     </main>
+    <footer class="footer">
+      <div class="flex-row footer-block">
+        <div class="footer-card">
+          <p class="footer-title">About us</p>
+          <p>
+            Sun Rise Herbs discovers ethically sourced natural ingredients to
+            deliver the potency of the natural world. If you're passionate in
+            culinary, preventative health, or hoping to enhance your well being,
+            botanical herbs have the power to uplift your daily routine.
+          </p>
+        </div>
+        <div class="footer-card links-card">
+          <p class="footer-title">Useful Links</p>
+          <a class="indv-a-link social-link" href=""
+            ><i class="devicon-facebook-plain"></i
+          ></a>
+          <a class="indv-a-link social-link" href=""
+            ><i class="devicon-twitter-original"></i
+          ></a>
+        </div>
+        <div class="footer-card">
+          <p class="contact-title footer-title">Contact Us</p>
+          <p class="contact-margin">info@SunRiseHerbs.com</p>
+          <p class="contact-margin">(844) 433 - 8686</p>
+          <p class="contact-margin">9am - 5pm MT</p>
+          <p class="contact-margin">Sun Rise Herbs</p>
+          <p class="contact-margin">1550 W Digital Drive #400</p>
+          <p class="contact-margin">Lehi, UT 84043</p>
+          <p class="contact-margin">United States</p>
+        </div>
+      </div>
+      <div class="flex-row">
+        <div class="copy-block">
+          <p>© Copyright 2022 Sun Rise Herbs, LLC. rights reserved.</p>
+        </div>
+        <div>
+          <img
+            class="pay-logo"
+            src="https://images.cutimes.com/cutimes/article/2014/12/16/apple-pay-logo.jpg"
+            alt=""
+          />
+          <img
+            class="pay-logo"
+            src="https://1000logos.net/wp-content/uploads/2021/05/Discover-logo.png"
+            alt=""
+          />
+          <img
+            class="pay-logo"
+            src="https://cdn.mos.cms.futurecdn.net/HoWB3DhRxjab5cXCig7dgg-1200-80.jpg"
+            alt=""
+          />
+          <img
+            class="pay-logo"
+            src="https://logos-world.net/wp-content/uploads/2020/04/Visa-Logo.png"
+            alt=""
+          />
+          <img
+            class="pay-logo"
+            src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/GooglePay_Lockup.max-2800x2800.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

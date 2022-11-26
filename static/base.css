@@ -1,10 +1,12 @@
-.products-image {
-  width: 13em;
+body {
+  color: hsl(81, 14%, 25%);
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: hsl(0, 0%, 100%);
 }
 
-.indv-product-image {
-  width: 25em;
-}
+/* Versatile Styling - apply as needed */
 
 .style-type {
   list-style-type: none;
@@ -20,4 +22,120 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+.body-margin {
+  padding: 9rem 0 3em 0;
+}
+
+.text-decor {
+  text-decoration: none;
+}
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+/* base.html */
+
+/* navbar */
+.fixed {
+  position: fixed;
+}
+
+.top-banner {
+  width: 100vw;
+  height: 5em;
+  margin: -0.1em;
+}
+
+.sales-banner {
+  text-align: center;
+  padding: 0.1em 0;
+  color: hsl(0, 0%, 94%);
+  background-color: hsl(87, 45%, 35%);
+}
+
+.navbar {
+  padding: 1.6em 1em;
+  background-color: hsl(87, 45%, 25%);
+}
+
+.indv-a-link {
+  text-align: center;
+  text-decoration: none;
+  color: hsl(0, 0%, 94%);
+  font-size: 1.4em;
+}
+
+.herbs-link {
+  padding: 0 34rem 0 2rem;
+}
+
+.home-link {
+  padding: 0 27rem 0 0;
+}
+
+.sign-link {
+  padding: 0 3.5rem 0 0;
+}
+
+/* footer */
+
+.footer-block {
+  background-color: hsl(87, 45%, 25%);
+  color: hsl(0, 0%, 94%);
+  padding: 1em 0;
+}
+
+.footer-card {
+  width: 20em;
+  margin: 0 2em 0 8em;
+}
+
+.links-card {
+  text-align: center;
+}
+
+.social-link {
+  margin: 0 0.4em;
+}
+
+.footer-title {
+  text-transform: uppercase;
+}
+
+.contact-title {
+  margin-top: 1em;
+}
+
+.contact-margin {
+  margin: 0 0 0em;
+}
+
+.copy-block {
+  margin: 0 48em 0 1em;
+}
+
+.pay-logo {
+  width: 2.5em;
+  margin: 0.8em 1em 0 0;
+  border: 1px solid hsl(0, 0%, 85%);
+  border-radius: 3px;
+}
+
+/* homepage.html */
+
+.promo-logo {
+  width: 9em;
+}
+
+/* alt. */
+
+.products-image {
+  width: 13em;
+}
+
+.indv-product-image {
+  width: 25em;
 }
