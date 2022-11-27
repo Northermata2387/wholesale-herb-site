@@ -1,39 +1,56 @@
 {% extends 'base.html' %} {% block body %}
-<div>
-  <div>
+<div class="flex-column">
+  <div class="flex-row">
     <div>
       <img class="indv-product-image" src="{{ product.image }}" />
     </div>
-    <div>
+    <div class="indv-product-card">
+      <h1>{{ product.name }} {{ product.part }} {{ product.grade }}</h1>
       <div>
-        <h1>{{ product.name }} {{ product.part }} {{ product.grade }}</h1>
-        <div>
-          {%if avg >= 0%}
-          <p>Rated a {{ "%0.1f" | format(avg) }}</p>
-          {%else%}
-          <p>No Ratings</p>
-          {%endif%}
-        </div>
-        <p>{{ product.botanical_name}}</p>
-        <p>{{ product.origin}}</p>
-        <p>{{ product.sku}}</p>
-        <p>{{ product.desc }}</p>
-        <p>{{ product.size }} {{ product.unit }}: ${{ product.price }}</p>
-        <a href="{{ url_for('add_to_cart', product_id=product.id) }}"
+        {%if avg >= 0%}
+        <p>Rated {{ "%0.1f" | format(avg) }} Stars</p>
+        {%else%}
+        <p>No Ratings</p>
+        {%endif%}
+      </div>
+      <div class="flex-row">
+        <p class="indv-tags">Botanical Name</p>
+        <p class="bold indv-tags">: {{ product.botanical_name }}</p>
+      </div>
+      <div class="flex-row">
+        <p class="indv-tags">Origin</p>
+        <p class="bold indv-tags">: {{ product.origin }}</p>
+      </div>
+      <div class="flex-row">
+        <p class="indv-tags">SKU</p>
+        <p class="bold indv-tags">: {{ product.sku }}</p>
+      </div>
+      <p>{{ product.desc }}</p>
+      <p class="indv-product-price">
+        {{ product.size }} {{ product.unit }} ${{ product.price }}
+      </p>
+      <p class="indv-add-to-cart">
+        <a
+          class="indv-cart-btn"
+          href="{{ url_for('add_to_cart', product_id=product.id) }}"
           >Add to Cart</a
         >
-      </div>
-      <div>
-        <ul class="style-type" loading="lazy">
-          {% for review in reviews %}
-          <li>{{ review.user.first_name }}</li>
-          <li>{{ review.date }}</li>
-          <li>{{ review.title }}</li>
-          <li>{{ review.comment }}</li>
+      </p>
+    </div>
+    <div class="review-block">
+      <ul class="style-type" loading="lazy">
+        {% for review in reviews %}
+        <div class="review-card">
+          <div class="flex-row">
+            <li class="review-name bold">{{ review.user.first_name }}</li>
+            <li class="review-date">{{ review.date }}</li>
+          </div>
+          <li class="bold">{{ review.title }}</li>
+          <li class="review-comment">{{ review.comment }}</li>
           <li>{{ product.name }} {{ product.part }} {{ product.grade }}</li>
-          {% endfor %}
-        </ul>
-      </div>
+        </div>
+        {% endfor %}
+      </ul>
     </div>
   </div>
   {% endblock %}

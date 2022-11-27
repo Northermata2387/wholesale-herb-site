@@ -32,6 +32,10 @@ body {
   text-decoration: none;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 .roboto {
   font-family: "Roboto", sans-serif;
 }
@@ -68,6 +72,15 @@ body {
   font-size: 0.9em;
 }
 
+.product-name {
+  text-decoration: none;
+  color: hsl(81, 14%, 25%);
+}
+
+.product-name:hover {
+  color: hsl(87, 45%, 35%);
+}
+
 .price {
   background-color: hsl(0, 0%, 90%);
   border-radius: 3px;
@@ -80,6 +93,10 @@ body {
   background-color: hsl(87, 45%, 35%);
   border-radius: 3px;
   padding: 0.2em 0.5em;
+}
+
+.add-to-cart:hover {
+  background-color: hsl(81, 14%, 25%);
 }
 
 .cart-btn {
@@ -185,8 +202,70 @@ body {
   width: 9em;
 }
 
-/* alt. */
+/* individual_products.html */
 
 .indv-product-image {
   width: 25em;
+  height: 25rem;
+  object-fit: cover;
+  margin: 3em 5em 1em 4em;
+  border: 1px solid hsl(0, 0%, 85%);
+  border-radius: 5px;
+  padding: 1.5em 2.5em 2em 3em;
+}
+
+.indv-product-card {
+  width: 40em;
+  margin-top: 3em;
+}
+
+.indv-tags {
+  margin: 0.1em;
+}
+
+.indv-product-price {
+  text-align: center;
+  width: 10em;
+  margin-top: 2em;
+  background-color: hsl(0, 0%, 90%);
+  border-radius: 3px;
+  padding: 0.5em 0.5em;
+}
+
+.indv-add-to-cart {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  background-color: hsl(87, 45%, 35%);
+  border-radius: 3px;
+  padding: 0.5em 0.5em;
+}
+
+.indv-cart-btn {
+  text-decoration: none;
+  color: hsl(0, 0%, 94%);
+}
+
+.review-block {
+  margin: 2em 0 0 1.7em;
+}
+
+.review-card {
+  padding: 1em;
+  border-top: 1px solid hsl(0, 0%, 90%);
+  border-radius: 3px;
+  width: 74em;
+}
+
+.review-name {
+  width: 10em;
+  margin-bottom: 1em;
+}
+
+.review-date {
+  margin-left: 58em;
+}
+
+.review-comment {
+  margin-bottom: 1em;
 }

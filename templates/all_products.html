@@ -27,7 +27,9 @@ block body %}
         </div>
         <p class="sku">SKU: {{ product.sku }}</p>
         <h4>
-          {{ product.name }} {{ product.part }} {{ product.grade }}
+          <a class="product-name" href="/products/{{ product.id }}">
+            {{ product.name }} {{ product.part }} {{ product.grade }}
+          </a>
         </h4>
         <p class="price">{{ product.size }} {{ product.unit }}  ${{ product.price }}</p>
         <p class="add-to-cart" >
