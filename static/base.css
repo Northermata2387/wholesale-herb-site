@@ -36,6 +36,57 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+/* all_products.html */
+
+.bulk-herbs {
+  margin: 0 0 3em 27em;
+  text-align: center;
+  width: 40em;
+}
+
+.herb-card {
+  width: 15em;
+  height: 20em;
+  padding: 0 1em 1.5em 1em;
+  border: 1px solid hsl(0, 0%, 90%);
+  border-radius: 3px;
+  margin: 0.3em 0.3em;
+}
+
+.image-div {
+  margin-left: 1em;
+}
+
+.products-image {
+  width: 13em;
+  height: 10em;
+  object-fit: cover;
+}
+
+.sku {
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+.price {
+  background-color: hsl(0, 0%, 90%);
+  border-radius: 3px;
+  padding: 0.1em 0.5em;
+}
+
+.add-to-cart {
+  text-align: center;
+  text-transform: uppercase;
+  background-color: hsl(87, 45%, 35%);
+  border-radius: 3px;
+  padding: 0.2em 0.5em;
+}
+
+.cart-btn {
+  text-decoration: none;
+  color: hsl(0, 0%, 94%);
+}
+
 /* base.html */
 
 /* navbar */
@@ -69,11 +120,11 @@ body {
 }
 
 .herbs-link {
-  padding: 0 34rem 0 2rem;
+  padding: 0 32rem 0 2rem;
 }
 
 .home-link {
-  padding: 0 27rem 0 0;
+  padding: 0 28rem 0 0;
 }
 
 .sign-link {
@@ -113,6 +164,10 @@ body {
   margin: 0 0 0em;
 }
 
+.contact-space {
+  margin-top: 0.2em;
+}
+
 .copy-block {
   margin: 0 48em 0 1em;
 }
@@ -131,10 +186,6 @@ body {
 }
 
 /* alt. */
-
-.products-image {
-  width: 13em;
-}
 
 .indv-product-image {
   width: 25em;

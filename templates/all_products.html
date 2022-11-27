@@ -1,21 +1,23 @@
 {% extends 'base.html' %} {%
 block body %}
-<div>
-  <h1>Bulk Herbs</h1>
-</div>
-<div>
-  <p>
-    Sun Rise offers premium products that are carefully selected for wonderful
-    character and high quality. With these fine herbs you can create your own
-    herbal catalog to craft natural products or add to a recipe for a meal.
-  </p>
+<div class="bulk-herbs">
+  <div>
+    <h1>Bulk Herbs</h1>
+  </div>
+  <div>
+    <p>
+      Sun Rise offers premium products that are carefully selected for wonderful
+      character and high quality. With these fine herbs you can create your own
+      herbal catalog to craft natural products or add to a recipe for a meal.
+    </p>
+  </div>
 </div>
 <div>
   <ul class="flex-row">
     {% for product in products %}
     <li class="style-type">
-      <div>
-        <div class="flex-column">
+      <div class="herb-card">
+        <div class="flex-column image-div">
           <a href="/products/{{ product.id }}">
             <img
               class="products-image"
@@ -23,14 +25,16 @@ block body %}
             />
           </a>
         </div>
-        <p>SKU: {{ product.sku }}</p>
+        <p class="sku">SKU: {{ product.sku }}</p>
         <h4>
           {{ product.name }} {{ product.part }} {{ product.grade }}
         </h4>
-        <p>{{ product.size }} {{ product.unit }}: ${{ product.price }}</p>
-        <a href="{{ url_for('add_to_cart', product_id=product.id) }}"
-          >Add to Cart</a
-        >
+        <p class="price">{{ product.size }} {{ product.unit }}  ${{ product.price }}</p>
+        <p class="add-to-cart" >
+          <a class="cart-btn" href="{{ url_for('add_to_cart', product_id=product.id) }}"
+            >Add To Cart</a
+          >
+        </p>
       </div>
     </li loading="lazy">
     {% endfor %}
