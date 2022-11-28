@@ -53,7 +53,7 @@ def add_to_cart(product_id):
     
     cart[product_id] = cart.get(product_id, 0) + 1
     session.modified = True
-    flash(f"Herb added to cart!")
+    flash(f" Herb added to cart!")
 
     return redirect("/products")
 
