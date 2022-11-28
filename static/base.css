@@ -44,6 +44,14 @@ body {
   font-style: italic;
 }
 
+/* 404.html */
+
+.not-found-image {
+  width: 40em;
+  margin-left: 28em;
+  object-fit: cover;
+}
+
 /* all_products.html */
 
 .bulk-herbs-page {
@@ -477,4 +485,37 @@ body {
 
 .review-comment {
   margin-bottom: 1em;
+}
+
+/* register.html */
+
+/* signin.html */
+
+/* under_construct.html */
+
+.fun-div {
+  position: relative;
+}
+
+.fun-text {
+  position: absolute;
+  color: hsl(0, 0%, 90%);
+  font-size: 0.7em;
+  z-index: 5;
+  margin: 14em 0 0 2em;
+}
+
+.first-dog {
+  margin: 12em 0 0 2em;
+}
+
+.second-dog {
+  margin: 30em 0 0 110em;
+}
+
+.dog-image {
+  width: 100vw;
+  height: 41em;
+  object-fit: cover;
+  z-index: 1;
 }
