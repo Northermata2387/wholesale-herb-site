@@ -1,45 +1,45 @@
 {% extends 'base.html' %} {%
 block body %}
-<div class="bulk-herbs">
-  <div>
-    <h1>Bulk Herbs</h1>
+<div class="bulk-herbs-page">
+  <div class="bulk-herbs">
+    <div>
+      <h1>Bulk Herbs</h1>
+    </div>
+    <div>
+      <p>
+        Sun Rise offers premium products that are carefully selected for wonderful
+        character and high quality. With these fine herbs you can create your own
+        herbal catalog to craft natural products or add to a recipe for a meal.
+      </p>
+    </div>
   </div>
   <div>
-    <p>
-      Sun Rise offers premium products that are carefully selected for wonderful
-      character and high quality. With these fine herbs you can create your own
-      herbal catalog to craft natural products or add to a recipe for a meal.
-    </p>
-  </div>
-</div>
-<div>
-  <ul class="flex-row">
-    {% for product in products %}
-    <li class="style-type">
-      <div class="herb-card">
-        <div class="flex-column image-div">
-          <a href="/products/{{ product.id }}">
-            <img
-              class="products-image"
-              src="{{ product.image }}"
-            />
-          </a>
+    <ul class="flex-row">
+      {% for product in products %}
+      <li class="style-type">
+        <div class="herb-card">
+          <div class="flex-column image-div">
+            <a href="/products/{{ product.id }}">
+              <img
+                class="products-image"
+                src="{{ product.image }}"
+              />
+            </a>
+          </div>
+          <p class="sku">SKU: {{ product.sku }}</p>
+          <h4>
+            <a class="product-name" href="/products/{{ product.id }}">
+              {{ product.name }} {{ product.part }} {{ product.grade }}
+            </a>
+          </h4>
+          <p class="price">{{ product.size }} {{ product.unit }}  ${{ product.price }}</p>
+            <a class="cart-btn" href="{{ url_for('add_to_cart', product_id=product.id) }}"
+              ><p class="add-to-cart" >Add To Cart</p></a
+            >
         </div>
-        <p class="sku">SKU: {{ product.sku }}</p>
-        <h4>
-          <a class="product-name" href="/products/{{ product.id }}">
-            {{ product.name }} {{ product.part }} {{ product.grade }}
-          </a>
-        </h4>
-        <p class="price">{{ product.size }} {{ product.unit }}  ${{ product.price }}</p>
-        <p class="add-to-cart" >
-          <a class="cart-btn" href="{{ url_for('add_to_cart', product_id=product.id) }}"
-            >Add To Cart</a
-          >
-        </p>
-      </div>
-    </li loading="lazy">
-    {% endfor %}
-  </ul>
+      </li loading="lazy">
+      {% endfor %}
+    </ul>
+  </div>
 </div>
 {% endblock %}

@@ -29,20 +29,18 @@
       <p class="indv-product-price">
         {{ product.size }} {{ product.unit }} ${{ product.price }}
       </p>
-      <p class="indv-add-to-cart">
-        <a
-          class="indv-cart-btn"
-          href="{{ url_for('add_to_cart', product_id=product.id) }}"
-          >Add to Cart</a
-        >
-      </p>
+      <a
+        class="indv-cart-btn"
+        href="{{ url_for('add_to_cart', product_id=product.id) }}"
+        ><p class="indv-add-to-cart">Add to Cart</p></a
+      >
     </div>
     <div class="review-block">
       <ul class="style-type" loading="lazy">
         {% for review in reviews %}
         <div class="review-card">
           <div class="flex-row">
-            <li class="review-name bold">{{ review.title }}</li>
+            <li class="review-title bold">{{ review.title }}</li>
             <li class="review-date">{{ review.date }}</li>
           </div>
           <li class="review-comment">{{ review.comment }}</li>

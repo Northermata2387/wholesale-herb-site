@@ -25,7 +25,7 @@ body {
 }
 
 .body-margin {
-  padding: 9rem 0 3em 0;
+  padding: 7.87em 0 0 0;
 }
 
 .text-decor {
@@ -40,10 +40,18 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.italic {
+  font-style: italic;
+}
+
 /* all_products.html */
 
+.bulk-herbs-page {
+  margin-bottom: 3em;
+}
+
 .bulk-herbs {
-  margin: 0 0 3em 27em;
+  margin: 2em 0 3em 27em;
   text-align: center;
   width: 40em;
 }
@@ -109,6 +117,7 @@ body {
 /* navbar */
 .fixed {
   position: fixed;
+  z-index: 10;
 }
 
 .top-banner {
@@ -134,18 +143,35 @@ body {
   text-decoration: none;
   color: hsl(0, 0%, 94%);
   font-size: 1.4em;
+  padding: 0.3em;
 }
 
 .herbs-link {
-  padding: 0 32rem 0 2rem;
+  padding: 0 32em 0 2em;
 }
 
 .home-link {
-  padding: 0 28rem 0 0;
+  padding: 0 25em 0 0;
 }
 
 .sign-link {
-  padding: 0 3.5rem 0 0;
+  padding: 0 3.5em 0 0;
+}
+
+/* Flash message */
+
+.flash-div {
+  position: relative;
+}
+
+.flash-msg {
+  position: absolute;
+  margin: 2em 0 0 80em;
+  color: hsl(87, 45%, 25%);
+  font-weight: bold;
+  padding: 0.5em;
+  border: 3px solid hsl(87, 45%, 35%);
+  border-radius: 3px;
 }
 
 /* footer */
@@ -198,8 +224,187 @@ body {
 
 /* homepage.html */
 
+/* discover card */
+
+.discover-card {
+  background-color: hsl(24, 26%, 93%);
+  width: 100%;
+}
+
+.discover-text {
+  width: 39em;
+  margin: 4em 3.25em 0 3.7em;
+}
+
+.main-desc {
+  font-weight: normal;
+  font-size: 3em;
+  margin: 0 0 0.5em 0;
+}
+
+.register-div {
+  width: 17em;
+}
+
+.register-acct {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  background-color: hsl(87, 45%, 35%);
+  border-radius: 25px;
+  padding: 0.5em 0.5em;
+}
+
+.register-acct:hover {
+  background-color: hsl(81, 14%, 25%);
+}
+
+.register-text {
+  color: hsl(0, 0%, 90%);
+  text-decoration: none;
+}
+
+.home-image {
+  width: 49em;
+  height: 31em;
+  object-fit: cover;
+}
+
+/* promo-line */
+
+.promo-line {
+  width: 100%;
+}
+
 .promo-logo {
-  width: 9em;
+  height: 3em;
+  margin: 1em 1em 0 0;
+}
+
+.forbes-logo {
+  margin: 0 2em 0.5em 21em;
+  height: 2em;
+  object-fit: cover;
+}
+
+.yahoo-logo {
+  width: 10em;
+  object-fit: cover;
+}
+
+.cnn-logo {
+  width: 8em;
+  object-fit: cover;
+}
+
+.g-review-logo {
+  height: 2.8em;
+  object-fit: cover;
+  margin-right: 2em;
+}
+
+.buzzfeed-logo {
+  height: 3.3em;
+  object-fit: cover;
+}
+
+/* lower pricing */
+
+.lower-price-block {
+  margin-top: 1em;
+  border-top: 1px solid hsl(0, 0%, 90%);
+}
+
+.lower-price-title {
+  text-align: center;
+  font-size: 0.8em;
+  margin-top: 2em;
+}
+
+.sales-card {
+  margin: 2em 0;
+}
+
+.sales-product {
+  text-decoration: none;
+  color: hsl(81, 14%, 25%);
+  text-align: center;
+}
+
+.sales-image {
+  width: 20em;
+}
+
+.shop-all-div {
+  margin-left: 40em;
+  margin-bottom: 3em;
+  width: 12em;
+}
+
+.shop-all-btn {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  margin: 0;
+  background-color: hsl(87, 45%, 35%);
+  border-radius: 25px;
+  padding: 0.5em 0.5em;
+}
+
+.shop-all-btn:hover {
+  background-color: hsl(81, 14%, 25%);
+}
+
+.shop-all-text {
+  margin: 0;
+  padding: 0;
+  color: hsl(0, 0%, 90%);
+  text-decoration: none;
+}
+
+/* Beleive in Quality  */
+
+.beleive-card {
+  background-color: hsl(24, 26%, 93%);
+  width: 100%;
+}
+
+.beleive-text {
+  width: 39em;
+  margin: 4em 3.25em 0 3.7em;
+}
+
+.beleive-title {
+  font-weight: normal;
+  font-size: 2em;
+  margin: 0 0 0.5em 0;
+}
+
+.beleive-list {
+  font-size: 1.2em;
+}
+
+.shop-now-div {
+  width: 10em;
+  margin-top: 2em;
+}
+
+.shop-now {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  background-color: hsl(87, 45%, 35%);
+  border-radius: 25px;
+  padding: 0.5em 0.5em;
+}
+
+.shop-now:hover {
+  background-color: hsl(81, 14%, 25%);
+}
+
+.shop-now-text {
+  color: hsl(0, 0%, 90%);
+  text-decoration: none;
 }
 
 /* individual_products.html */
@@ -208,15 +413,15 @@ body {
   width: 25em;
   height: 25rem;
   object-fit: cover;
-  margin: 3em 5em 1em 4em;
-  border: 1px solid hsl(0, 0%, 85%);
+  margin: 4em 8em 4em 4em;
+  border: 1px solid hsl(0, 0%, 90%);
   border-radius: 5px;
   padding: 1.5em 2.5em 2em 3em;
 }
 
 .indv-product-card {
   width: 40em;
-  margin-top: 3em;
+  margin-top: 4em;
 }
 
 .indv-tags {
@@ -251,7 +456,7 @@ body {
 }
 
 .review-block {
-  margin: 2em 0 0 1.7em;
+  margin: 2em 0 2em 1.7em;
 }
 
 .review-card {
@@ -261,7 +466,7 @@ body {
   width: 74em;
 }
 
-.review-name {
+.review-title {
   width: 10em;
   margin-bottom: 1em;
 }

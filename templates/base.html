@@ -27,21 +27,21 @@
         <p>Free shipping on orders over $50 *Terms and Conditions Apply*</p>
       </div>
       <div class="navbar flex-row">
-        <div>
-          <a class="indv-a-link herbs-link" href="{{ url_for('all_products') }}"
+        <div class="herbs-link">
+          <a class="indv-a-link" href="{{ url_for('all_products') }}"
             >Bulk Herbs</a
           >
         </div>
-        <div>
-          <a class="indv-a-link home-link" href="{{ url_for('homepage') }}"
+        <div class="home-link">
+          <a class="indv-a-link" href="{{ url_for('homepage') }}"
             >Sun Rise Herbs</a
           >
         </div>
-        <div>
+        <div class="sign-link">
           {% if 'user_email' in session %}
-          <a class="indv-a-link sign-link" href="/signout">Sign Out</a>
+          <a class="indv-a-link" href="/signout">Sign Out</a>
           {% else %}
-          <a class="indv-a-link sign-link" href="/signin">Sign In</a>
+          <a class="indv-a-link" href="/signin">Sign In</a>
           {% endif %}
         </div>
         <div>
@@ -50,9 +50,9 @@
       </div>
     </nav>
     <main class="body-margin">
-      <div>
+      <div class="flash-div">
         {% for msg in get_flashed_messages() %}
-        <p>{{ msg }}</p>
+        <p class="flash-msg">{{ msg }}</p>
         {% endfor %}
       </div>
       {% block body %}{% endblock %} {% block after_body %}{% endblock %}

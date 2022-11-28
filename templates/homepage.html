@@ -1,89 +1,97 @@
 {% extends 'base.html' %} {% block body %}
 <div>
-  <div>
-    <div>
-      <p>Interested in an Account?</p>
-      <p>Discover our bulk herbs in the sizes and quantities you need.</p>
-      <p>
-        <a href="{{ url_for('register') }}">Register an account</a>
+  <div class="flex-row discover-card">
+    <div class="discover-text">
+      <p class="italic">Interested in an Account?</p>
+      <p class="robot0 main-desc">
+        Discover our bulk herbs in the sizes and quantities you need.
       </p>
+      <div class="register-div">
+        <a class="register-text" href="{{ url_for('register') }}"
+          ><p class="register-acct">Register an account</p></a
+        >
+      </div>
     </div>
-    <div>
-      <img
-        src="https://images.unsplash.com/photo-1514733670139-4d87a1941d55?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=878&q=80"
-        alt=""
-      />
-    </div>
+    <img
+      class="home-image"
+      src="https://images.unsplash.com/photo-1514733670139-4d87a1941d55?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=878&q=80"
+      alt=""
+    />
   </div>
   <div>
-    <div>
+    <div class="promo-line">
       <img
-        class="promo-logo"
+        class="promo-logo forbes-logo"
         src="https://imgs.search.brave.com/XrfUqUFpkwbZm5SuY_u-OzgZBZBcE7qKSlRCN8HPD6k/rs:fit:600:157:1/g:ce/aHR0cDovL3d3dy5z/bWlsZWJyaWxsaWFu/dC5jb20vc3RhdGlj/L2ltYWdlcy9mb3Ji/ZXMtbG9nby1ncmV5/LnBuZw"
         alt=""
       />
       <img
-        class="promo-logo"
+        class="promo-logo yahoo-logo"
         src="https://imgs.search.brave.com/eCY5Uab_XyeaGR2CFAehIAmLN2TZEanBrJtzAZo9Gmg/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Ux/LmV4cGxpY2l0LmJp/bmcubmV0L3RoP2lk/PU9JUC42TFJNTk9Q/U0VGU3ZfNjJFeEs2/ZjVBSGFIYSZwaWQ9/QXBp"
         alt=""
       />
       <img
-        class="promo-logo"
+        class="promo-logo cnn-logo"
         src="https://imgs.search.brave.com/XRpArY2Yq3aRdc_q8Mh5xK1bI8MorasRcDwkxFGs-Cw/rs:fit:618:260:1/g:ce/aHR0cHM6Ly9yb290/c29mZW1wYXRoeS5v/cmcvd3AtY29udGVu/dC91cGxvYWRzLzIw/MTkvMDMvQ05OLWdy/ZXkuanBn"
         alt=""
       />
       <img
-        class="promo-logo"
+        class="promo-logo g-review-logo"
         src="https://imgs.search.brave.com/jFPz06KfWneuGEJB7ogRgwzFQda6qCpBq9CpgdiCO7g/rs:fit:814:225:1/g:ce/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5Q/RHlPVGlSbkV5eWF3/X21JZkhFLWZRSGFF/VSZwaWQ9QXBp"
         alt=""
       />
       <img
-        class="promo-logo"
+        class="promo-logo buzzfeed-logo"
         src="https://static.showit.co/800/USe9t0d8RXyT6VCnaX057Q/64967/buzzfeed-logo-grey.png"
         alt=""
       />
     </div>
   </div>
-  <div>
-    <div>
+  <div class="lower-price-block">
+    <div class="lower-price-title">
       <h1>New Lower Pricing on 50% of Herbs!</h1>
     </div>
-    <div>
+    <div class="flex-row">
       {% for product in products[3:25:7] %}
-      <div>
+      <div class="sales-card">
         <ul class="style-type">
-          <a href="/products/{{ product.id }}">
-            <li><img class="products-image" src="{{ product.image }}" /></li>
+          <a class="sales-product" href="/products/{{ product.id }}">
+            <li><img class="sales-image" src="{{ product.image }}" /></li>
             <li>{{ product.name }} {{ product.part }} {{ product.grade }}</li>
             <li>${{ product.price }}</li>
           </a>
         </ul>
       </div>
       {% endfor %}
-      <p>
-        <a href="{{ url_for('all_products') }}">Shop All</a>
-      </p>
+    </div>
+    <div class="shop-all-div">
+      <a class="shop-all-text" href="{{ url_for('all_products') }}">
+        <p class="shop-all-btn">Shop All</p></a
+      >
     </div>
   </div>
-  <div>
-    <div>
-      <p>Beleive in Quality!</p>
-      <p>We source all of our premium herbs ethically and thoughtfully</p>
-      <ol class="style-type">
+  <div class="flex-row beleive-card">
+    <img
+      class="home-image"
+      src="https://images.unsplash.com/photo-1492552085122-36706c238263?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1197&q=80"
+      alt=""
+    />
+    <div class="beleive-text">
+      <p class="italic">Beleive in Quality!</p>
+      <p class="beleive-title">
+        We source all of our premium herbs ethically and thoughtfully
+      </p>
+      <ol class="style-type beleive-list">
         <li>✔ 100% Satisfaction</li>
         <li>✔ #1 Supplier of Herbs in USA</li>
         <li>✔ Trusted Quality on every order</li>
         <li>✔ Free Shipping on Orders over $50</li>
       </ol>
-      <p>
-        <a href="{{ url_for('all_products') }}">Shop Now</a>
-      </p>
-    </div>
-    <div>
-      <img
-        src="https://images.unsplash.com/photo-1492552085122-36706c238263?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1197&q=80"
-        alt=""
-      />
+      <div class="shop-now-div">
+        <a class="shop-now-text" href="{{ url_for('all_products') }}"
+          ><p class="shop-now">Shop Now</p></a
+        >
+      </div>
     </div>
   </div>
 </div>

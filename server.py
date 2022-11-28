@@ -62,7 +62,7 @@ def add_to_cart(product_id):
 def empty_cart():
     
     session["cart"] = {}
-    flash("Your Cart is empty, please choose a product...")
+    flash("Your Cart is empty")
 
     return redirect("/products")
 
@@ -139,7 +139,7 @@ def process_signin():
         return redirect("/signin")
     else:
         session["user_email"] = user.email
-        flash(f"Welcome {user.first_name}!")
+        flash(f"Welcome back {user.first_name}!")
         
         return redirect("/products")
 
