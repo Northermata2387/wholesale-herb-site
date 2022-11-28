@@ -42,12 +42,11 @@
         {% for review in reviews %}
         <div class="review-card">
           <div class="flex-row">
-            <li class="review-name bold">{{ review.user.first_name }}</li>
+            <li class="review-name bold">{{ review.title }}</li>
             <li class="review-date">{{ review.date }}</li>
           </div>
-          <li class="bold">{{ review.title }}</li>
           <li class="review-comment">{{ review.comment }}</li>
-          <li>{{ product.name }} {{ product.part }} {{ product.grade }}</li>
+          <li>~ {{ review.user.first_name }}</li>
         </div>
         {% endfor %}
       </ul>

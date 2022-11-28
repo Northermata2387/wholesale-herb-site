@@ -241,6 +241,10 @@ body {
   padding: 0.5em 0.5em;
 }
 
+.indv-add-to-cart:hover {
+  background-color: hsl(81, 14%, 25%);
+}
+
 .indv-cart-btn {
   text-decoration: none;
   color: hsl(0, 0%, 94%);
