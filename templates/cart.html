@@ -1,59 +1,81 @@
 {% extends 'base.html' %} {% block body %}
-<div>
-  <h1>Cart Details</h1>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Part</th>
-        <th>Grade</th>
-        <th>Size</th>
-        <th>Unit</th>
-        <th>Quantity</th>
-        <th>Price</th>
-        <th>Total</th>
-        <th>
-          <button>
-            <a href="/empty-cart" class="empty-cart">Remove All</a></th>
-          </button>
-      </tr>
-    </thead>
-    <tbody>
-      {% for product in cart_products %}
-      <tr>
-        <td>{{ product.name }}</td>
-        <td>{{ product.part }}</td>
-        <td>{{ product.grade }}</td>
-        <td>{{ product.size }}</td>
-        <td>{{ product.unit }}</td>
-        <td>{{ product.quantity }}</td>
-        <div>
-          <td>${{ "%0.2f" | format(product.price) }}</td>
-          <td>${{ "%0.2f" | format(product.total_cost) }}</td>
-        </div>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-  <div class="flex-row">
-    <div>
-      <p><a href="{{ url_for('all_products') }}">Continue Shopping</a></p>
-    </div>
+<div class="cart-div">
+  <div class="cart-notice">
+    <p>
+      Orders typically ship within 1-2 business days. Delays may occur for
+      larger orders or around holidays.
+    </p>
+    <p>Thank you for your patience and understanding.</p>
+  </div>
+  <div>
     <div class="flex-row">
-      <p>Subtotal:</p>
-      <p>${{ "%0.2f" | format(order_total) }}</p>
+      <h1>Your Cart</h1>
+      <div class="empty-cart-div">
+        <a class="empy-cart-btn" href="/empty-cart" class="empty-cart"
+          >Empy Cart</a
+        >
+      </div>
     </div>
-    <div class="flex-row">
-      <p>Tax</p>
-      <p>(calculated at checkout)</p>
-    </div>
-    <div class="flex-row">
-      <p>Shipping</p>
-      <p>(calculated at checkout)</p>
-    </div>
-    <div class="flex-row">
-      <p>Gross Total:</p>
-      <p>${{ "%0.2f" | format(order_total) }}</p>
+    <table>
+      <thead>
+        <tr class="table-head">
+          <th>Name</th>
+          <th>Part</th>
+          <th>Grade</th>
+          <th>Size</th>
+          <th>Unit</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {% for product in cart_products %}
+        <tr>
+          <td>{{ product.name }}</td>
+          <td>{{ product.part }}</td>
+          <td>{{ product.grade }}</td>
+          <td>{{ product.size }}</td>
+          <td>{{ product.unit }}</td>
+          <td>{{ product.quantity }}</td>
+          <div>
+            <td>${{ "%0.2f" | format(product.price) }}</td>
+            <td>${{ "%0.2f" | format(product.total_cost) }}</td>
+          </div>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <div class="flex-column cart-options">
+      <div class="cont-shop-btn">
+        <a class="cont-shop-text" href="{{ url_for('all_products') }}"
+          ><p>Continue Shopping</p></a
+        >
+      </div>
+      <div class="flex-row">
+        <p class="bold">Subtotal:</p>
+        <p class="cart-subtotal">${{ "%0.2f" | format(order_total) }}</p>
+      </div>
+      <div class="flex-row border-top">
+        <p class="bold">Tax</p>
+        <p class="cart-tax">(calculated at checkout)</p>
+      </div>
+      <div class="flex-row border-top">
+        <p class="bold">Shipping</p>
+        <p class="cart-shipping">(calculated at checkout)</p>
+      </div>
+      <div class="flex-row border-top">
+        <p class="bold">Gross Total:</p>
+        <p class="cart-total">${{ "%0.2f" | format(order_total) }}</p>
+      </div>
+      <div class="cont-shop-btn">
+        <a class="cont-shop-text" href="{{ url_for('under') }}"
+          ><p>Checkout</p></a
+        >
+      </div>
     </div>
   </div>
 </div>
