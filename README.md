@@ -43,27 +43,27 @@ Sun Rise Herbs is not deployed at this time. Please see the instructions below t
 
 Use the Home navagation bar to view alternate pages and enjoy the options on the home page.
 
-![Sun Rise Herbs home page](/static/images/readme-images/01-homepage.JPG"Sun Rise Herbs home page")
+![Sun Rise Herbs Home image](/static/images/readme-images/01-homepage.JPG "Sun Rise Herbs Home image")
 
 Go to the register page and create your own account.
 
-![Sun Rise Herbs register page](/static/images/readme-images/02-register.JPG"Sun Rise Herbs register page")
+![Sun Rise Herbs register page](/static/images/readme-images/02-register.JPG "Sun Rise Herbs register page")
 
 After your registered, sign in.
 
-![Sun Rise Herbs sign in page](/static/images/readme-images/03-signin.JPG"Sun Rise Herbs sign in page")
+![Sun Rise Herbs sign in page](/static/images/readme-images/03-signin.JPG "Sun Rise Herbs sign in page")
 
 Click on Bulk Herbs page to view and add to your cart
 
-![Sun Rise Herbs all-products page](/static/images/readme-images/04-all-products.JPG"Sun Rise Herbs all-products page")
+![Sun Rise Herbs all-products page](/static/images/readme-images/04-all-products.JPG "Sun Rise Herbs all-products page")
 
 Go to an individual product page to see additional details, average rating and possibly reviews.
 
-![Sun Rise Herbs individual product page](/static/images/readme-images/05-indv-product.JPG"Sun Rise Herbs individual product page")
+![Sun Rise Herbs individual product page](/static/images/readme-images/05-indv-product.JPG "Sun Rise Herbs individual product page")
 
 Head to the Cart link and see the chosen product and break down of cost.
 
-![Sun Rise Herbs cart page](/static/images/readme-images/06-cart.JPG"Sun Rise Herbs cart page")
+![Sun Rise Herbs cart page](/static/images/readme-images/06-cart.JPG "Sun Rise Herbs cart page")
 
 Learn more about the developer:<br/>
 Mark Nakayama is a software engineer in Denver, CO<br/>
