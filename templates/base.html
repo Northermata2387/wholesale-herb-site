@@ -33,9 +33,12 @@
           >
         </div>
         <div class="home-link">
-          <a class="indv-a-link" href="{{ url_for('homepage') }}"
-            >Sun Rise Herbs</a
-          >
+          <a href="{{ url_for('homepage') }}"
+            ><img
+              class="srh-logo"
+              src="../static/images/sun-rise-herbs-logo.png"
+              alt=""
+          /></a>
         </div>
         <div class="sign-link">
           {% if 'user_email' in session %}
@@ -44,12 +47,12 @@
           <a class="indv-a-link" href="/signin">Sign In</a>
           {% endif %}
         </div>
-        <div>
+        <div class="cart-link">
           <a class="indv-a-link" href="{{ url_for('cart') }}">Cart</a>
         </div>
       </div>
     </nav>
-    <main class="body-margin">
+    <main class="body-padding">
       <div class="flash-div">
         {% for msg in get_flashed_messages() %}
         <p class="flash-msg">{{ msg }}</p>
