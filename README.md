@@ -17,22 +17,22 @@ Sun Rise Herbs is not deployed at this time. Please see the instructions below t
     <ul>
       <li>Open project folder</li>
       <li>Virtual Enviroment 
-        <ul>In terminal RUN...</ul>
-        <ul>python -m venv venv</ul>
-        <ul>source venv/Scripts/activate</ul>
-        <ul>pip install -r requirements.txt</ul>
+        <ul>- In terminal RUN...</ul>
+        <ul>- python -m venv venv</ul>
+        <ul>- source venv/Scripts/activate</ul>
+        <ul>- pip install -r requirements.txt</ul>
       </li>
       <li>PostgreSQL_URI
-        <ul>Note: setup requires PostgeSQL to be installed on localhost</ul>
-        <ul>Create a config.sh file at root</ul>
-        <ul>Add the code below to the config.sh</ul>
-        <ul>export POSTGRES_URI="postgresql://username:password@localhost:5432/rising-sun-herbs"</ul>
-        <ul>Add your username and password for PostgeSQL</ul>
-        <ul>In terminal RUN... </ul>
-        <ul>source config.sh</ul>
+        <ul>- Note: setup requires PostgeSQL to be installed on localhost</ul>
+        <ul>- Create a config.sh file at root</ul>
+        <ul>- Add the code below to the config.sh</ul>
+        <ul>- export POSTGRES_URI="postgresql://username:password@localhost:5432/rising-sun-herbs"</ul>
+        <ul>- Add your username and password for PostgeSQL</ul>
+        <ul>- In terminal RUN... </ul>
+        <ul>- source config.sh</ul>
       </li>
       <li>In terminal RUN...
-        <ul>python seed_database.py</ul></li>
+        <ul>- python seed_database.py</ul></li>
     </ul>
 </li>
 <li>Run Server
@@ -45,7 +45,7 @@ Sun Rise Herbs is not deployed at this time. Please see the instructions below t
  
 <h2>How to use Sun Rise Herbs:</h2>
 
-Use the Home navagation bar to view alternate pages and enjoy the options on the home page.
+Use the navagation bar at the top to view alternate pages and enjoy the options on the home page.
 
 ![Sun Rise Herbs Home image](/static/images/readme-images/01-home-page.JPG "Sun Rise Herbs Home image")
 
