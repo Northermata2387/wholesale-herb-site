@@ -2,7 +2,7 @@
  
 Sun Rise Herbs is an eCommerce website made for the prupose of selling bulk herbs for direct to customer (DTC) or wholesale (B2B). Python files were created to seed data from JSON and CSV files into a PostgreSQL database. Flask, SQL-alchemy, and Jinja were used to bring this data to the front end for user interaction and sale.
 
-![Sun Rise Herbs Home image](/static/images/readme-images/01-homepage.JPG "Sun Rise Herbs Home image")
+![Sun Rise Herbs Home image](/static/images/readme-images/01-home-page.JPG "Sun Rise Herbs Home image")
 
 <h2>Technologies:</h2>
 Flask | Jinja | Python | SQL-alchemy | PostgreSQL
@@ -43,7 +43,7 @@ Sun Rise Herbs is not deployed at this time. Please see the instructions below t
 
 Use the Home navagation bar to view alternate pages and enjoy the options on the home page.
 
-![Sun Rise Herbs Home image](/static/images/readme-images/01-homepage.JPG "Sun Rise Herbs Home image")
+![Sun Rise Herbs Home image](/static/images/readme-images/01-home-page.JPG "Sun Rise Herbs Home image")
 
 Go to the register page and create your own account.
 
