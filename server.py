@@ -139,7 +139,7 @@ def process_signin():
         return redirect("/signin")
     else:
         session["user_email"] = user.email
-        flash(f"Welcome back {user.first_name}!")
+        flash(f"Welcome back {user.email}!")
         
         return redirect("/products")
 

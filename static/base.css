@@ -152,6 +152,12 @@ body {
   color: hsl(0, 0%, 94%);
   font-size: 1.4em;
   padding: 0.3em;
+  border: 1px solid hsl(87, 45%, 25%);
+  border-radius: 3px;
+}
+
+.indv-a-link:hover {
+  border: 1px solid white;
 }
 
 .herbs-link {
@@ -174,8 +180,9 @@ body {
 
 .flash-msg {
   position: absolute;
-  margin: 2em 0 0 80em;
+  margin: 2em 0 0 78em;
   color: hsl(87, 45%, 25%);
+  background-color: hsl(0, 0%, 100%);
   font-weight: bold;
   padding: 0.5em;
   border: 3px solid hsl(87, 45%, 35%);

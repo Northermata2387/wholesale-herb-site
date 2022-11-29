@@ -48,6 +48,9 @@ def get_product_by_id(product_id):
 
     return Product.query.get(product_id)
 
+def get_product_by_name(product_name):
+
+    return Product.query.get(product_name)
 
 
 def create_rating(user_id, product_id, score):
