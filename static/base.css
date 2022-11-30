@@ -535,7 +535,7 @@ td {
   width: 25em;
   height: 25rem;
   object-fit: cover;
-  margin: 4em 8em 4em 4em;
+  margin: 3em 8em 4em 4em;
   border: 1px solid hsl(0, 0%, 90%);
   border-radius: 5px;
   padding: 1.5em 2.5em 2em 3em;
@@ -543,7 +543,7 @@ td {
 
 .indv-product-card {
   width: 40em;
-  margin-top: 4em;
+  margin-top: 3.5em;
 }
 
 .indv-tags {
