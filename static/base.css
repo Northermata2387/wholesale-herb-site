@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: hsl(81, 14%, 25%);
   font-family: "Open Sans", sans-serif;
@@ -59,7 +63,7 @@ body {
 }
 
 .bulk-herbs {
-  margin: 2em 0 3em 28em;
+  margin: 2em 0 3em 26.5em;
   text-align: center;
   width: 40em;
 }
@@ -149,24 +153,23 @@ body {
 .indv-a-link {
   text-align: center;
   text-decoration: none;
-  color: hsl(0, 0%, 94%);
-  font-size: 1.4em;
+  color: hsl(48, 100%, 50%);
+  font-size: 1.3em;
   padding: 0.3em;
   border: 1px solid hsl(87, 45%, 25%);
   border-radius: 3px;
 }
 
 .indv-a-link:hover {
-  border: 1px solid white;
+  border: 1px solid hsl(48, 100%, 50%);
 }
 
 .herbs-link {
-  margin-top: 2em;
-  padding: 0 32em 0 2em;
+  margin: 2em 31em 0 3em;
 }
 
 .home-link {
-  padding: 0 25em 0 0;
+  margin: 0 27em 0 0;
 }
 
 .srh-logo {
@@ -176,12 +179,11 @@ body {
 }
 
 .srh-logo:hover {
-  border: 1px solid white;
+  border: 1px solid hsl(48, 100%, 50%);
 }
 
 .sign-link {
-  margin-top: 2em;
-  padding: 0 3.5em 0 0;
+  margin: 2em 3.5em 0 0;
 }
 
 .cart-link {
@@ -223,6 +225,11 @@ body {
 
 .social-link {
   margin: 0 0.4em;
+  text-align: center;
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  font-size: 1.3em;
+  padding: 0.3em;
 }
 
 .footer-title {
@@ -597,14 +604,14 @@ td {
 /* register.html */
 
 .register-block {
-  margin: 8em 0 13em 2em;
+  margin: 8em 0 13em 0;
   text-align: center;
 }
 
 /* signin.html */
 
 .sign-in-block {
-  margin: 5em 0 10em 18em;
+  margin: 5em 0 10em 16em;
 }
 
 .sign-in-title {

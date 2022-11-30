@@ -109,7 +109,7 @@ def register_user():
     
     user = crud.get_user_by_email(email)
     if user:
-        flash("Your account already exists. Please Sing In")
+        flash("Your account already exists")
     else:
         user = crud.create_user_form(email, password)
         db.session.add(user)
